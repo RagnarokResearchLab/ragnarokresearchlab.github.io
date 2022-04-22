@@ -1,0 +1,9 @@
+@font-face {
+	font-family: "NotoSans Regular";
+	src: url('/static/fonts/NotoSans-Regular.ttf') format('truetype');
+}
+
+:root {
+	--ifm-font-family-monospace: "NotoSans Regular";
+	--ifm-font-family-base: "NotoSans Regular"
+}
