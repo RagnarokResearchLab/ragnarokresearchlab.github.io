@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-with-transparency.png',
   organizationName: 'RagnarokResearchLab', // Usually your GitHub org/user name.
   projectName: 'ragnarokresearchlab.github.io', // Usually your repo name.
   trailingSlash: true,
