@@ -9,6 +9,7 @@
 @import "./color-theme-dark.css";
 @import "./navigation-bar.css";
 @import "./landing-page.css";
+@import "./footer.css";
 
 /* You can override the default Infima variables here. */
 :root {
