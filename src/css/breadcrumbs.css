@@ -1,0 +1,18 @@
+.breadcrumbs__item--active .breadcrumbs__link {
+	color: var(--text-color-grey);
+}
+
+.breadcrumbs__link {
+	color: var(--link-color-blue);
+	/* No idea why they add a padding, but it looks absolutely horrible */
+	padding: 0;
+}
+
+.breadcrumbs__item:after {
+	background-color: var(--link-color-blue);
+}
+
+.breadcrumbs {
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	padding-bottom: 1rem;
+}

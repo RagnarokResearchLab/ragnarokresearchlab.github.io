@@ -1,0 +1,7 @@
+.table-of-contents__link--active {
+	color: var(--link-color-blue-hover);
+}
+
+.table-of-contents__link:hover {
+	color: var(--link-color-blue-hover);
+}
