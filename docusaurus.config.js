@@ -83,6 +83,10 @@ const config = {
                 to: "/about",
               },
               {
+                label: "File Formats",
+                to: "/file-formats",
+              },
+              {
                 label: "Game Mechanics",
                 to: "/game-mechanics",
               },
