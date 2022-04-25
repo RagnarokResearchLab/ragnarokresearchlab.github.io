@@ -3,7 +3,13 @@
 	src: url('/static/fonts/NotoSans-Regular.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: "Open Sans";
+	src: url('/static/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
 :root {
 	--ifm-font-family-monospace: "NotoSans Regular";
 	--ifm-font-family-base: "NotoSans Regular"
+	--ifm-heading-font-family: "Open Sans", sans-serif;
 }
