@@ -7,6 +7,7 @@
 @import "./font-styles.css";
 @import "./default-theme-resets.css";
 @import "./color-theme-dark.css";
+@import "./navigation-bar.css";
 
 /* You can override the default Infima variables here. */
 :root {
