@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "linter": "npx eslint --cache \"**/*.{js,ts}\"",
+    "check-format": "npx prettier --check .",
     "autoformat": "npx prettier --write .",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
