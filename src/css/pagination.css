@@ -1,17 +1,17 @@
 /* The buttons used to navigate between pages for some reason don't use the link colors... */
 .pagination-nav__link {
-	border-color: var(--link-color-blue);
+  border-color: var(--link-color-blue);
 }
 
 .pagination-nav__link:hover {
-	border-color: var(--link-color-blue-hover);
+  border-color: var(--link-color-blue-hover);
 }
 
 .pagination-nav__label {
-	font-size: var(--heading-size-normal);
+  font-size: var(--heading-size-normal);
 }
 
 .pagination-nav__link {
-	border-radius: 0;
-	border-width: 2px;
+  border-radius: 0;
+  border-width: 2px;
 }

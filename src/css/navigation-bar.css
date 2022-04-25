@@ -1,28 +1,28 @@
 .navbar {
-	background-color: var(--background-color-darkest);
-	border-bottom: 1px solid var(--border-color-darkgrey);
+  background-color: var(--background-color-darkest);
+  border-bottom: 1px solid var(--border-color-darkgrey);
 }
 
 .navbar a {
-	color: var(--text-color-white);
-	font-size: var(--font-size-large);
+  color: var(--text-color-white);
+  font-size: var(--font-size-large);
 }
 
 .navbar a:hover {
-	color: var(--link-color-white-hover);
+  color: var(--link-color-white-hover);
 }
 
 .navbar__logo img {
-	border-radius: 50%;
-	width: 32px;
-	height: 32px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
 }
 
 .navbar__logo:hover {
-	filter: brightness(1.2)
+  filter: brightness(1.2);
 }
 
 .navbar__title {
-	/* This is necessary to avoid letters like "g" from being cut off */
-	line-height: 32px;
+  /* This is necessary to avoid letters like "g" from being cut off */
+  line-height: 32px;
 }
