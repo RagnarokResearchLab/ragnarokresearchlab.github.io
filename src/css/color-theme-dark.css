@@ -54,4 +54,6 @@ a:hover {
 code {
   color: var(--background-color-darkpurple);
   border-radius: 0;
+  font-size: 85%;
+  border: none;
 }
