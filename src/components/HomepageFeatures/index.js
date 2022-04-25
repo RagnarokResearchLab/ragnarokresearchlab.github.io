@@ -49,6 +49,15 @@ function Feature({Svg, title, description}) {
   );
 }
 
+// See https://reactjs.org/docs/typechecking-with-proptypes.html
+import PropTypes from 'prop-types';
+
+Feature.propTypes = {
+  Svg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+}
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>

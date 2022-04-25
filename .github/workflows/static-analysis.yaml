@@ -1,0 +1,32 @@
+name: Static Analysis
+
+on:
+  pull_request:
+    paths-ignore:
+      - "README.md"
+    types: [opened, synchronize, reopened, ready_for_review]
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+
+jobs:
+  lint:
+    name: eslint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repo sitory
+        uses: actions/checkout@v1
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install development dependencies
+        run: npm install --also=dev
+
+      - name: Perform static analysis
+        run: npm run linter
