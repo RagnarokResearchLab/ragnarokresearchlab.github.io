@@ -1,0 +1,9 @@
+.main-wrapper {
+	color: var(--text-color-white);
+	background-color: var(--background-color-darker);
+}
+
+@import "pagination.css";
+@import "breadcrumbs.css";
+@import "table-of-contents-sidebar.css";
+@import "menu-sidebar.css";

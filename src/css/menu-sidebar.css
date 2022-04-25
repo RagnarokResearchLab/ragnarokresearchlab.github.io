@@ -1,0 +1,42 @@
+.menu__list {
+	background-color: var(--background-color-darkest);
+
+}
+
+.menu__link,
+.menu__link--sublist {
+	color: var(--text-color-grey);
+}
+
+.theme-doc-sidebar-menu {
+	padding: 8px 0;
+	margin: 8px;
+}
+
+.menu__list-item:not(:first-child),
+.menu__link--sublist {
+	margin: 0;
+}
+
+.menu__list .menu__list {
+	padding-left: 0;
+	margin: 0;
+}
+
+.menu__list .menu__list .menu__link:not(.menu__link--sublist)::before {
+	content: "";
+	padding-left: var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__link--active {
+	background-color: var(--text-color-grey-highlighted);
+	color: var(--text-color-white);
+}
+
+.menu__link:hover,
+.menu__link--active:not(.menu__link--sublist),
+.menu__list-item-collapsible:hover {
+	background-color: var(--text-color-grey-highlighted);
+	color: var(--text-color-white-hover);
+	border-radius: 0;
+}

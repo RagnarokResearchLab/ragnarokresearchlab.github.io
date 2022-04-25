@@ -1,0 +1,55 @@
+:root {
+	--text-color-white: rgba(255, 255, 255, 0.84);
+	--text-color-white-hover: rgba(255, 255, 255, 1);
+	--text-color-grey: rgba(255, 255, 255, 0.7);
+	--text-color-grey-highlighted: rgb(35, 37, 42);
+
+	--text-color-blue: #148eff;
+	--link-color-blue: #7abfff;
+	--link-color-blue-hover: #cfdfff;
+	--link-color-white-hover: rgb(255, 255, 255);
+
+	--background-color-darkest: rgb(21, 23, 30);
+	--background-color-darker: rgb(26, 28, 35);
+	--background-color-dark: rgb(41, 43, 51);
+	--background-color-darkpurple: rgb(20, 14, 19);
+	--background-color-darkgrey: rgba(255, 255, 255, 0.05);
+	--background-color-grey: rgba(255, 255, 255, 0.10);
+
+	--border-color-darkgrey: rgba(255, 255, 255, 0.12);
+
+	--box-shadow-color: rgba(0, 0, 0, .2);
+
+	--ifm-color-primary: var(--text-color-blue);
+	--ifm-color-content-secondary: var(--link-color-blue);
+
+	/* The icons are SVGs and not visible by default with a dark theme; I guess they assumed regular themes are always light? */
+	/* Based on the darkmode filter added in https://github.com/facebookincubator/infima/pull/48 */
+	--ifm-breadcrumb-separator-filter: invert(100%) sepia(11%) saturate(0%) hue-rotate(149deg) brightness(99%) contrast(95%);
+	--ifm-menu-link-sublist-icon-filter: invert(100%) sepia(11%) saturate(0%) hue-rotate(149deg) brightness(99%) contrast(95%);
+
+	--ifm-hero-background-color: var(--background-color-darkpurple);
+	--ifm-menu-color-background-active: var(--background-color-darker);
+	--ifm-navbar-background-color: var(--background-color-darker);
+}
+
+.navbar__toggle:hover {
+	color: var(--text-color-white-hover);
+}
+
+.navbar__toggle {
+	color: var(--text-color-white);
+}
+
+a {
+	color: var(--link-color-blue);
+}
+
+a:hover {
+	color: var(--link-color-blue-hover);
+}
+
+code {
+	color: var(--background-color-darkpurple);
+	border-radius: 0;
+}
