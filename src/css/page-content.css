@@ -1,6 +1,6 @@
 .main-wrapper {
-	color: var(--text-color-white);
-	background-color: var(--background-color-darker);
+  color: var(--text-color-white);
+  background-color: var(--background-color-darker);
 }
 
 @import "pagination.css";

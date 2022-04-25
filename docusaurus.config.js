@@ -1,33 +1,34 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://ragnarokresearchlab.github.io',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
-  favicon: 'img/favicon-with-transparency.png',
-  organizationName: 'RagnarokResearchLab', // Usually your GitHub org/user name.
-  projectName: 'ragnarokresearchlab.github.io', // Usually your repo name.
+  title: "My Site",
+  tagline: "Dinosaurs are cool",
+  url: "https://ragnarokresearchlab.github.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
+  favicon: "img/favicon-with-transparency.png",
+  organizationName: "RagnarokResearchLab", // Usually your GitHub org/user name.
+  projectName: "ragnarokresearchlab.github.io", // Usually your repo name.
   trailingSlash: true,
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -37,61 +38,61 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Ragnarok Research Lab',
+        title: "Ragnarok Research Lab",
         logo: {
-          alt: 'Ragnarok Research Lab Logo',
-          src: 'img/logo-with-more-space-around.png',
+          alt: "Ragnarok Research Lab Logo",
+          src: "img/logo-with-more-space-around.png",
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Tutorial",
           },
           {
-            href: 'https://discord.gg/7RFdMNrySy',
-            label: 'Discord',
-            position: 'right',
+            href: "https://discord.gg/7RFdMNrySy",
+            label: "Discord",
+            position: "right",
           },
           {
-            href: 'https://github.com/RagnarokResearchLab',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/RagnarokResearchLab",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Documentation',
+            title: "Documentation",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: "Tutorial",
+                to: "/docs/intro",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.gg/7RFdMNrySy',
+                label: "Discord",
+                href: "https://discord.gg/7RFdMNrySy",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/RagnarokResearchLab',
+                label: "GitHub",
+                href: "https://github.com/RagnarokResearchLab",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: "GitHub",
+                href: "https://github.com/facebook/docusaurus",
               },
             ],
           },

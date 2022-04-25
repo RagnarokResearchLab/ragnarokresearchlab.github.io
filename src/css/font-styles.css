@@ -1,50 +1,50 @@
 @font-face {
-	font-family: "NotoSans Regular";
-	src: url('/static/fonts/NotoSans-Regular.ttf') format('truetype');
+  font-family: "NotoSans Regular";
+  src: url("/static/fonts/NotoSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "Open Sans";
-	src: url('/static/fonts/OpenSans-Bold.ttf') format('truetype');
+  font-family: "Open Sans";
+  src: url("/static/fonts/OpenSans-Bold.ttf") format("truetype");
 }
 
 :root {
-	--ifm-font-family-base: "NotoSans Regular", sans-serif;
-	--ifm-heading-font-family: "Open Sans", sans-serif;
+  --ifm-font-family-base: "NotoSans Regular", sans-serif;
+  --ifm-heading-font-family: "Open Sans", sans-serif;
 
-	--font-size-large: 1.2rem;
-	--font-size-normal: 1rem;
-	--font-size-small: 0.8rem;
-	--font-size-largest: 2.4rem;
+  --font-size-large: 1.2rem;
+  --font-size-normal: 1rem;
+  --font-size-small: 0.8rem;
+  --font-size-largest: 2.4rem;
 
-	/* I guess these should also use rem, but I'm not sure how it looks on different devices/sceen sizes (needs testing) */
-	font: normal 16px/20px "Noto Sans", sans-serif;
-	--heading-size-normal: 20px;
-	--heading-size-large: 24px;
-	--heading-size-larger: 28px;
-	--heading-size-largest: 35px;
+  /* I guess these should also use rem, but I'm not sure how it looks on different devices/sceen sizes (needs testing) */
+  font: normal 16px/20px "Noto Sans", sans-serif;
+  --heading-size-normal: 20px;
+  --heading-size-large: 24px;
+  --heading-size-larger: 28px;
+  --heading-size-largest: 35px;
 
-	--ifm-h1-font-size: var(--heading-size-largest);
+  --ifm-h1-font-size: var(--heading-size-largest);
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 h1 {
-	font-weight: bold;
-	font-size: var(--heading-size-largest);
-	line-height: 40px;
+  font-weight: bold;
+  font-size: var(--heading-size-largest);
+  line-height: 40px;
 }
 
 h2 {
-	font-weight: bold;
-	font-size: var(--heading-size-larger);
-	line-height: 32px;
+  font-weight: bold;
+  font-size: var(--heading-size-larger);
+  line-height: 32px;
 }
 
 h3 {
-	font-weight: bold;
-	font-size: var(--heading-size-large);
-	line-height: 32px;
+  font-weight: bold;
+  font-size: var(--heading-size-large);
+  line-height: 32px;
 }

@@ -1,5 +1,5 @@
 /* Lots of rules in the default themes seem arbitrary and limiting, so this reset aims to remove them. */
 :root {
-	/* Whoever designed the default theme clearly has a preference for rounded corners... which I absolutely do not share */
-	--ifm-global-radius: 0;
+  /* Whoever designed the default theme clearly has a preference for rounded corners... which I absolutely do not share */
+  --ifm-global-radius: 0;
 }

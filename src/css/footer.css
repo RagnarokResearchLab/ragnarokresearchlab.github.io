@@ -1,18 +1,18 @@
 .footer {
-	background-color: var(--background-color-darkest);
-	border-top: 1px solid var(--border-color-darkgrey);
+  background-color: var(--background-color-darkest);
+  border-top: 1px solid var(--border-color-darkgrey);
 }
 
 .footer a {
-	color: var(--text-color-white);
-	font-size: var(--font-size-normal);
+  color: var(--text-color-white);
+  font-size: var(--font-size-normal);
 }
 
 .footer a:hover {
-	color: var(--link-color-white-hover);
+  color: var(--link-color-white-hover);
 }
 
 .footer__copyright {
-	color: var(--text-color-grey);
-	font-size: var(--font-size-small);
+  color: var(--text-color-grey);
+  font-size: var(--font-size-small);
 }
