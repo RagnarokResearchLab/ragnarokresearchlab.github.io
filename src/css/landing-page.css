@@ -1,0 +1,35 @@
+.hero--primary {
+	box-shadow: 0 0 20px inset var(--box-shadow-color);
+	border-bottom: 1px solid var(--border-color-darkgrey);
+}
+
+.feature-card {
+	background-color: var(--background-color-dark);
+	height: 100%;
+	border-top: 1px solid var(--border-color-darkgrey);
+	border-radius: 5%;
+}
+
+.hero-banner-image {
+	border: 2px solid var(--border-color-darkgrey);
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	border-radius: 50%;
+}
+
+.feature-card-image:hover {
+	filter: brightness(1.2);
+}
+
+.banner-action-container {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.hero__title {
+	font-size: var(--font-size-largest);
+}
+
+.hero__subtitle {
+	font-size: var(--font-size-large);
+}
