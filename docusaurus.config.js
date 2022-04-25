@@ -43,10 +43,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'Ragnarok Research Lab',
         logo: {
-          alt: 'My Site Logo',
-          src: 'img/logo.svg',
+          alt: 'Ragnarok Research Lab Logo',
+          src: 'img/logo-with-more-space-around.png',
         },
         items: [
           {
