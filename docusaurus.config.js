@@ -57,6 +57,11 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
+            href: 'https://discord.gg/7RFdMNrySy',
+            label: 'Discord',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/RagnarokResearchLab',
             label: 'GitHub',
             position: 'right',
