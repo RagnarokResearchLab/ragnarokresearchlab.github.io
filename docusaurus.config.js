@@ -47,12 +47,6 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
-          },
-          {
             href: "https://discord.gg/7RFdMNrySy",
             label: "Discord",
             position: "right",
@@ -69,12 +63,7 @@ const config = {
         links: [
           {
             title: "Documentation",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/intro",
-              },
-            ],
+            items: [],
           },
           {
             title: "Community",
