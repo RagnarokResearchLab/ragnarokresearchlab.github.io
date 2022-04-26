@@ -22,6 +22,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: "docs",
+          routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
@@ -45,12 +47,6 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Tutorial",
-          },
-          {
             href: "https://discord.gg/7RFdMNrySy",
             label: "Discord",
             position: "right",
@@ -67,12 +63,7 @@ const config = {
         links: [
           {
             title: "Documentation",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro",
-              },
-            ],
+            items: [],
           },
           {
             title: "Community",
