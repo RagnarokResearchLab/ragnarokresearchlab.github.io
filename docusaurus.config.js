@@ -63,7 +63,12 @@ const config = {
         links: [
           {
             title: "Documentation",
-            items: [],
+            items: [
+              {
+                label: "Game Mechanics",
+                to: "/game-mechanics",
+              },
+            ],
           },
           {
             title: "Community",
