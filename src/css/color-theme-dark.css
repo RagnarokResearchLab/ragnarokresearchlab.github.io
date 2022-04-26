@@ -2,6 +2,7 @@
   --text-color-white: rgba(255, 255, 255, 0.84);
   --text-color-white-hover: rgba(255, 255, 255, 1);
   --text-color-grey: rgba(255, 255, 255, 0.7);
+  --text-color-darkgrey: rgb(139, 148, 158);
   --text-color-grey-highlighted: rgb(35, 37, 42);
 
   --text-color-blue: #148eff;
@@ -33,6 +34,9 @@
   --ifm-hero-background-color: var(--background-color-darkpurple);
   --ifm-menu-color-background-active: var(--background-color-darker);
   --ifm-navbar-background-color: var(--background-color-darker);
+
+  --ifm-blockquote-color: var(--text-color-darkgrey);
+  --ifm-blockquote-border-color: var(--text-color-darkgrey);
 }
 
 .navbar__toggle:hover {
