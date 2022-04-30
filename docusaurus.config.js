@@ -47,6 +47,11 @@ const config = {
         },
         items: [
           {
+            href: "/game-mechanics",
+            label: "Game Mechanics",
+            position: "left",
+          },
+          {
             href: "https://discord.gg/7RFdMNrySy",
             label: "Discord",
             position: "right",
@@ -63,7 +68,12 @@ const config = {
         links: [
           {
             title: "Documentation",
-            items: [],
+            items: [
+              {
+                label: "Game Mechanics",
+                to: "/game-mechanics",
+              },
+            ],
           },
           {
             title: "Community",
