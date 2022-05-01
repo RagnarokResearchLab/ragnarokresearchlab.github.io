@@ -208,7 +208,7 @@ Here's the list of all known special conditional keywords:
 |    `IF_ENEMYCOUNT`    |   `>=`   |     Number     |        Number of enemies in attack range is above threshold         |              Alarm: Splash Attack              |
 |      `IF_HIDING`      |   ---    |      ---       |                    Unit is hidden (Hiding skill)                    |                  Smokie: Heal                  |
 |        `IF_HP`        |   `<=`   |     Number     |                  Unit's health is below threshold                   |                 Sohee: Suicide                 |
-|   `IF_MAGICLOCKED`    |   ---    |      ---       |             Unit is silenced or on a Land Protector (?)             |            Amon Ra: Summon Monster             |
+|   `IF_MAGICLOCKED`    |   ---    |      ---       |                 Unit's cast detection has triggered                 |            Amon Ra: Summon Monster             |
 |  `IF_MASTERATTACKED`  |   ---    |      ---       |                Parent unit was recently attacked (?)                |      Summoned Hydra (Alchemist): Revenge       |
 |     `IF_MASTERHP`     |   `<=`   |     Number     |               Parent unit's health is below threshold               |     Summoned Geographer (Alchemist): Heal      |
 |  `IF_RANGEATTACKED`   |   ---    |      ---       |              Unit was recently hit by a ranged attack               |    Errende Ebecee (BioLabs Acolyte): Pneuma    |
