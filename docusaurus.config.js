@@ -79,6 +79,10 @@ const config = {
             title: "Documentation",
             items: [
               {
+                label: "About",
+                to: "/about",
+              },
+              {
                 label: "Game Mechanics",
                 to: "/game-mechanics",
               },
