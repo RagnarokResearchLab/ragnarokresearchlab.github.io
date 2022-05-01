@@ -20,7 +20,7 @@ For practical reasons, only the original ("classic") version of Ragnarok Online 
 
 ## Prerequisites
 
-You may want to read up on some of the fundamentals of client-server-programming, networking, and game development to make best use of this resource. Here's a list of suggestions for topics that should give you a decent understanding to start with:
+You may want to read up on some of the fundamentals of client-server-programming, networking, and game development to make best use of this resource. Here's a list of suggestions for topics that should give you a decent understanding to begin with:
 
 - [Game Programming Patterns: Game Loop](https://gameprogrammingpatterns.com/game-loop.html) describes a typical approach for implementing gameplay
 - [Game Server Ticks](https://en.wikipedia.org/wiki/Game_server#Tickrate) details how game servers update a persistent world in tiny, incremental steps
