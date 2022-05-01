@@ -12,7 +12,7 @@ Due to the technical nature of the subject matter, this specification is written
 
 ## Objectives
 
-After studying this documentation, you should understand how the game works "behind the scenes". All descriptions aim to be sufficiently exact and rich in technical detail, so that you may gain a deeper appreciation for the design and implementation of complex software systems. The author also wishes to ceate a valuable resource for anyone who's interested in Ragnarok Online's official and private server communities. Needless to say: **All information is provided for educational purposes only.**
+After studying this documentation, you should understand how the game works "behind the scenes". All descriptions aim to be sufficiently exact and rich in technical detail, so that you may gain a deeper appreciation for the design and implementation of the underlying software systems. At the very least, it should be an interesting read to anyone who's curious about Ragnarok Online's technological foundations. Needless to say, **all information is provided for educational purposes only.**
 
 ## Limitations
 
