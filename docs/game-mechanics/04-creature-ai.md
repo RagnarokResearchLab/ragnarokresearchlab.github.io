@@ -223,7 +223,7 @@ The following screenshot of `ANGELING`'s skillset (taken from [Kokotewa's RO dat
 
 ![Screenshot of the skillset table for ANGELING](04-monster-skillset-example.png)
 
-Accordingly, its skill usage pattern for Heal can be summed up in a few sentences:
+Accordingly, its skill usage pattern for Summon Slave can be summed up in a few sentences:
 
 > Angeling has a 100% chance to summon new followers, when it's attacking or idle and the number of existing minions is three or less. This cast takes 2 seconds, is not interruptible, and can only be used once per minute. It will emote `/heh` afterwards.
 
