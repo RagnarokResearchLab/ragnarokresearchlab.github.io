@@ -71,7 +71,6 @@ Any zone server has to check its internal clock regularly and initiate a mapwide
 
 Whenever the simulation advances, certain mapwide events take place immediately:
 
-- Creation and removal of MVP tombstone markers
 - Regeneration of monsters that were previously considered "dead"
 
 Keeping up with the lifetime of creatures is one of the main tasks of the zone server, so this will be run at least once per frame.
