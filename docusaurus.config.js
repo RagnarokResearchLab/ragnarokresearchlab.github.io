@@ -25,9 +25,8 @@ const config = {
           path: "docs",
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/RagnarokResearchLab/ragnarokresearchlab.github.io/edit/main/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -50,6 +49,11 @@ const config = {
             href: "/game-mechanics",
             label: "Game Mechanics",
             position: "left",
+          },
+          {
+            href: "/contributing",
+            label: "Contribute",
+            position: "right",
           },
           {
             href: "https://discord.gg/7RFdMNrySy",
@@ -82,6 +86,10 @@ const config = {
           {
             title: "Community",
             items: [
+              {
+                label: "Contributing",
+                to: "/contributing",
+              },
               {
                 label: "Discord",
                 href: "https://discord.gg/7RFdMNrySy",
