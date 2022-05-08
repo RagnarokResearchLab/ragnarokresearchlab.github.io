@@ -46,6 +46,11 @@ const config = {
         },
         items: [
           {
+            href: "/about",
+            label: "About",
+            position: "left",
+          },
+          {
             href: "/game-mechanics",
             label: "Game Mechanics",
             position: "left",
@@ -73,6 +78,10 @@ const config = {
           {
             title: "Documentation",
             items: [
+              {
+                label: "About",
+                to: "/about",
+              },
               {
                 label: "Game Mechanics",
                 to: "/game-mechanics",
