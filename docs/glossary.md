@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-slug: /references/glossary
+sidebar_position: 5
+slug: /glossary
 title: Glossary
 ---
 
