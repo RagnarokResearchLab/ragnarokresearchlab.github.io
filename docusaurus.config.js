@@ -52,6 +52,11 @@ const config = {
             position: "left",
           },
           {
+            href: "/contributing",
+            label: "Contribute",
+            position: "right",
+          },
+          {
             href: "https://discord.gg/7RFdMNrySy",
             label: "Discord",
             position: "right",
