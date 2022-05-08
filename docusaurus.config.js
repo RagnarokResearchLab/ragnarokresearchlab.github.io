@@ -83,6 +83,10 @@ const config = {
             title: "Community",
             items: [
               {
+                label: "Contributing",
+                to: "/contributing",
+              },
+              {
                 label: "Discord",
                 href: "https://discord.gg/7RFdMNrySy",
               },
