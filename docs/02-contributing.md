@@ -66,6 +66,8 @@ Beyond this, sources can be added in _italics_ below [block quotes](https://comm
 
 _Source: Completely made up, but you should include the actual source here. Don't forget to include the link if one is available._
 
+The purpose of adding these notes is to make it easy to spot sections that could benefit from some more research.
+
 ### Placeholders
 
 While having empty sections in the documentation can be frustrating for the reader, there are situations where adding a placeholder is acceptable. Whenever you're aware of an important topic that should be covered, but currently isn't - for example because no one knows the details - you can add a placeholder notice via [Docusaurus admonitions](https://docusaurus.io/docs/markdown-features/admonitions). Here's an example:
@@ -83,6 +85,8 @@ Please also [open an issue](https://github.com/RagnarokResearchLab/ragnarokresea
 In order to ensure that the documentation doesn't overstep the legal boundaries imposed by the [Digital Millennium Copyright Act](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) and [EU legislation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=LEGISSUM:mi0016), you must be mindful of what is submitted for publishing. The [WINE Clean Room Guidelines](https://wiki.winehq.org/Clean_Room_Guidelines) should provide a decent starting point, but please do employ common sense. Obviously infringing contents will not be accepted.
 
 ## Development
+
+You may be confused when you first take a look at the repository's codebase. Thankfully, you only need to know a few things.
 
 ### Organization of the Repository
 
@@ -110,6 +114,8 @@ You can work with the website on your local computer by typing any of the follow
 In addition to the above, all default [Docusaurus commands](https://docusaurus.io/docs/cli) should work, but you probably won't ever need them.
 
 ## Writing
+
+Writing excellent technical documentation is far easier said than done, so here's some pointers to make it more manageable.
 
 ### Documentation Categories
 
