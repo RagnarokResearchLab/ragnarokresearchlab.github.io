@@ -38,11 +38,11 @@ Technically, you also can add more complex behavior using [React](https://reactj
 
 ### Docusaurus
 
-The [Docusaurus](https://docusaurus.io/) framework creates the documentation website from markdown (and JavaScript) files inside the repository. For the most part, this can be ignored since the output format doesn't change if you only edit the contents. Should you want to make more sweeping changes that affect the layout of the website itself, you'll likely have to learn a bit more about it first.
+The [Docusaurus](https://docusaurus.io/) framework creates a documentation website from markdown (and JavaScript) files inside the repository. For the most part, this can be ignored since the output format doesn't change if you only edit the contents. Should you want to make more sweeping changes that affect the layout of the website itself, you'll likely have to learn a bit more about it first.
 
 ### NodeJS and the Node Package Manager
 
-While not required to change the documentation, you may want to download [NodeJS](https://nodejs.org) and the included `npm` tool. Once you've them installed, you can run any of the preconfigured [NPM script commands](#npm-scripts) in the project root to perform a variety of development tasks. If you're only interested in the contents and writing, you don't need to worry about this at all.
+While not required to change the documentation, you may want to download [NodeJS](https://nodejs.org) and the included `npm` tool. Once you have them installed, you can run any of the preconfigured [NPM script commands](#npm-scripts) in the project root to perform a variety of development tasks. If you're only interested in the contents and writing, you don't need to worry about this at all.
 
 ## Content Guidelines
 
@@ -66,6 +66,8 @@ Beyond this, sources can be added in _italics_ below [block quotes](https://comm
 
 _Source: Completely made up, but you should include the actual source here. Don't forget to include the link if one is available._
 
+The purpose of adding these notes is to make it easy to spot sections that could benefit from some more research.
+
 ### Placeholders
 
 While having empty sections in the documentation can be frustrating for the reader, there are situations where adding a placeholder is acceptable. Whenever you're aware of an important topic that should be covered, but currently isn't - for example because no one knows the details - you can add a placeholder notice via [Docusaurus admonitions](https://docusaurus.io/docs/markdown-features/admonitions). Here's an example:
@@ -83,6 +85,8 @@ Please also [open an issue](https://github.com/RagnarokResearchLab/ragnarokresea
 In order to ensure that the documentation doesn't overstep the legal boundaries imposed by the [Digital Millennium Copyright Act](https://en.wikipedia.org/wiki/Digital_Millennium_Copyright_Act) and [EU legislation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=LEGISSUM:mi0016), you must be mindful of what is submitted for publishing. The [WINE Clean Room Guidelines](https://wiki.winehq.org/Clean_Room_Guidelines) should provide a decent starting point, but please do employ common sense. Obviously infringing contents will not be accepted.
 
 ## Development
+
+You may be confused when you first take a look at the repository's codebase. Thankfully, you only need to know a few things.
 
 ### Organization of the Repository
 
@@ -111,6 +115,8 @@ In addition to the above, all default [Docusaurus commands](https://docusaurus.i
 
 ## Writing
 
+Writing excellent technical documentation is far easier said than done, so here's some pointers to make it more manageable.
+
 ### Documentation Categories
 
 For the most part, the contents of the documentation can be found in the top-level `docs` folder. Each section consists of a folder with a "table of contents" page, the `index`, and individual markdown pages for each article. The `_category_.json` file is a special Docusaurus construct that allows setting the title and location (i.e., where the category should be displayed in the sidebar).
@@ -130,3 +136,5 @@ If you want to learn more about technical writing, here's a few links that can h
 - [Google's Technical Writing Course](https://developers.google.com/tech-writing) should be your first stop, as it covers the basics of writing about a technical subject
 - [Google's State of DevOps Report (2021)](https://services.google.com/fh/files/misc/state-of-devops-2021.pdf) includes a short section about software documentation on pages 21 to 23
 - The [Good Docs Project](https://thegooddocsproject.dev/) offers some useful resources, such as an [Information Architecture Guide](https://thegooddocsproject.dev/ia-guide/)
+
+Remember: It's better to write something than nothing and then iterate on it later. All contributions are welcome!
