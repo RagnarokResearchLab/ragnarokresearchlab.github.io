@@ -38,11 +38,11 @@ Technically, you also can add more complex behavior using [React](https://reactj
 
 ### Docusaurus
 
-The [Docusaurus](https://docusaurus.io/) framework creates the documentation website from markdown (and JavaScript) files inside the repository. For the most part, this can be ignored since the output format doesn't change if you only edit the contents. Should you want to make more sweeping changes that affect the layout of the website itself, you'll likely have to learn a bit more about it first.
+The [Docusaurus](https://docusaurus.io/) framework creates a documentation website from markdown (and JavaScript) files inside the repository. For the most part, this can be ignored since the output format doesn't change if you only edit the contents. Should you want to make more sweeping changes that affect the layout of the website itself, you'll likely have to learn a bit more about it first.
 
 ### NodeJS and the Node Package Manager
 
-While not required to change the documentation, you may want to download [NodeJS](https://nodejs.org) and the included `npm` tool. Once you've them installed, you can run any of the preconfigured [NPM script commands](#npm-scripts) in the project root to perform a variety of development tasks. If you're only interested in the contents and writing, you don't need to worry about this at all.
+While not required to change the documentation, you may want to download [NodeJS](https://nodejs.org) and the included `npm` tool. Once you have them installed, you can run any of the preconfigured [NPM script commands](#npm-scripts) in the project root to perform a variety of development tasks. If you're only interested in the contents and writing, you don't need to worry about this at all.
 
 ## Content Guidelines
 
