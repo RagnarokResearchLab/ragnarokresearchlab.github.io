@@ -136,3 +136,5 @@ If you want to learn more about technical writing, here's a few links that can h
 - [Google's Technical Writing Course](https://developers.google.com/tech-writing) should be your first stop, as it covers the basics of writing about a technical subject
 - [Google's State of DevOps Report (2021)](https://services.google.com/fh/files/misc/state-of-devops-2021.pdf) includes a short section about software documentation on pages 21 to 23
 - The [Good Docs Project](https://thegooddocsproject.dev/) offers some useful resources, such as an [Information Architecture Guide](https://thegooddocsproject.dev/ia-guide/)
+
+Remember: It's better to write something than nothing and then iterate on it later. All contributions are welcome!
