@@ -110,11 +110,11 @@ const config = {
             ],
           },
           {
-            title: "More",
+            title: "Tools",
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Coming Soon™",
+                href: "/tools/",
               },
             ],
           },
