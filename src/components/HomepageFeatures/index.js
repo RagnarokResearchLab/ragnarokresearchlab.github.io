@@ -6,8 +6,8 @@ const FeatureList = [
   {
     title: "Browse the Docs",
     bannerImage: "./img/hero_banner_book.png",
-    actionableLink: "View Documentation ➤",
-    actionableLinkTarget: "./documentation/",
+    actionableLink: "Table of Contents ➤",
+    actionableLinkTarget: "./contents/",
     description: (
       <>
         Read about file formats and other topics to learn more about the inner
