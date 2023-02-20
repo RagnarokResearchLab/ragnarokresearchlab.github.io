@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Ragnarok Research Lab",
+  tagline: "Technical documentation for Gravity Co's MMORPG Ragnarok Online.",
   url: "https://ragnarokresearchlab.github.io",
   baseUrl: "/",
   onBrokenLinks: "throw",

@@ -4,41 +4,65 @@ import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: "Easy to Use",
+    title: "Browse the Docs",
+    bannerImage: "./img/hero_banner_book.png",
+    actionableLink: "View Documentation ➤",
+    actionableLinkTarget: "./documentation/",
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Read about file formats and other topics to learn more about the inner
+        workings of the game.
       </>
     ),
   },
   {
-    title: "Focus on What Matters",
+    title: "Contribute to the Project",
+    bannerImage: "./img/hero_banner_collaboration.png",
+    actionableLink: "Get Involved ➤",
+    actionableLinkTarget: "./contributing/",
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Every bit helps! Let&apos;s create a shared body of knowledge that
+        anyone can understand.
       </>
     ),
   },
   {
-    title: "Powered by React",
+    title: "Discover New Tools",
+    bannerImage: "./img/hero_banner_tools.png",
+    actionableLink: "Explore RO Tools ➤",
+    actionableLinkTarget: "./tools/",
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Various utilities for working with RO-related data, made available under
+        a free software license.
       </>
     ),
   },
 ];
 
-function Feature({ title, description }) {
+function Feature({
+  bannerImage,
+  title,
+  description,
+  actionableLink,
+  actionableLinkTarget,
+}) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center"></div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
+      <div className="feature-card">
+        <div className="text--center feature-card-image">
+          <img src={bannerImage} className="hero-banner-image" />
+        </div>
+        <div className="text--center padding-horiz--md">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <div className="banner-action-container">
+            <a href={actionableLinkTarget} className="banner-action-link">
+              {actionableLink}
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -48,7 +72,9 @@ function Feature({ title, description }) {
 import PropTypes from "prop-types";
 
 Feature.propTypes = {
-  Svg: PropTypes.string.isRequired,
+  bannerImage: PropTypes.string.isRequired,
+  actionableLink: PropTypes.string.isRequired,
+  actionableLinkTarget: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

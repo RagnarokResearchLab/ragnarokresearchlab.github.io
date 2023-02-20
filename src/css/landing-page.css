@@ -1,6 +1,7 @@
 .hero--primary {
   box-shadow: 0 0 20px inset var(--box-shadow-color);
   border-bottom: 1px solid var(--border-color-darkgrey);
+  background-color: var(--background-color-darkest);
 }
 
 .feature-card {
@@ -15,6 +16,7 @@
   margin-top: 1.5em;
   margin-bottom: 1em;
   border-radius: 50%;
+  max-width: 280px;
 }
 
 .feature-card-image:hover {
