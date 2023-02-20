@@ -119,7 +119,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ragnarok Research Lab authors and contributors.<br/>All trademarks referenced herein are the properties of their respective owners.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ragnarok Research Lab (authors and contributors).<br/>All trademarks referenced herein are the properties of their respective owners.`,
       },
       colorMode: {
         disableSwitch: true,
