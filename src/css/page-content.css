@@ -1,6 +1,16 @@
 .main-wrapper {
   color: var(--text-color-white);
   background-color: var(--background-color-darker);
+  justify-content: flex-start !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
 }
 
 @import "pagination.css";

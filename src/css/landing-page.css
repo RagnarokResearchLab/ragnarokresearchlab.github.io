@@ -4,6 +4,10 @@
   background-color: var(--background-color-darkest);
 }
 
+.heroBanner {
+  padding: 0;
+}
+
 .feature-card {
   background-color: var(--background-color-dark);
   height: 100%;

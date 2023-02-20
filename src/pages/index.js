@@ -24,8 +24,10 @@ export default function Home() {
       description="Home of the Ragnarok Research Lab project"
     >
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
+      <main className="hero-main">
+        <section>
+          <HomepageFeatures />
+        </section>
       </main>
     </Layout>
   );
