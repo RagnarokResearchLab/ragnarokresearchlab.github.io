@@ -97,6 +97,10 @@ const config = {
                 to: "/file-formats",
               },
               {
+                label: "Rendering",
+                to: "/rendering",
+              },
+              {
                 label: "Game Mechanics",
                 to: "/game-mechanics",
               },
