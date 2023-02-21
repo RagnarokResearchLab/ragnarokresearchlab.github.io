@@ -56,6 +56,11 @@ const config = {
             position: "left",
           },
           {
+            href: "/rendering",
+            label: "Rendering",
+            position: "left",
+          },
+          {
             href: "/game-mechanics",
             label: "Game Mechanics",
             position: "left",
@@ -90,6 +95,10 @@ const config = {
               {
                 label: "File Formats",
                 to: "/file-formats",
+              },
+              {
+                label: "Rendering",
+                to: "/rendering",
               },
               {
                 label: "Game Mechanics",
