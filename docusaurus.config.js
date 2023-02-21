@@ -56,6 +56,11 @@ const config = {
             position: "left",
           },
           {
+            href: "/rendering",
+            label: "Rendering",
+            position: "left",
+          },
+          {
             href: "/game-mechanics",
             label: "Game Mechanics",
             position: "left",
