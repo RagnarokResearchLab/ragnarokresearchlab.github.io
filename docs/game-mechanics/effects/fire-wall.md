@@ -6,9 +6,18 @@ title: Fire Wall
 
 Fire Wall is a Mage spell that places several AOE triggers, which can damage and knock back enemies.
 
+## Segments
+
+A Fire Wall consists of multiple segments, which are spawned when the spell is cast. They expand from the cast location:
+
+- Horizontal and vertical fire walls spawn three segments adjacent to the "root" segment (placed on the target cell)
+- Diagonal fire walls spawn two segments adjacent to the root segment, and two additional ones to prevent "holes"
+
+The individual segments seem to exist as independent game actors for the duration of their lifetime.
+
 ## Lifecycle
 
-A Fire Wall consists of three segments, which are spawned when the spell is cast. These segments seem to exist as independent game actors for the duration of their lifetime. Segments will expire after a fixed time (if still "alive") determined by the skill level.
+Segments will expire after a fixed time (if still "alive") determined by the skill level, or if they get in contact with enemies.
 
 Each segment carries a number of charges (I like to think of it as "health points"), representing how many hits can be inflicted on enemies that touch the actor. Once all charges are depleted, the segment "dies" and vanishes from the game world.
 
