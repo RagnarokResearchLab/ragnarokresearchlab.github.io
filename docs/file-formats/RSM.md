@@ -1,5 +1,4 @@
 ---
-sidebar_position: 100
 slug: /file-formats/rsm
 title: RSM (Placeholder)
 ---

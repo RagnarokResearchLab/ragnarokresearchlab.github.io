@@ -1,5 +1,4 @@
 ---
-sidebar_position: 120
 slug: /file-formats/gr2
 title: GR2 (Placeholder)
 ---

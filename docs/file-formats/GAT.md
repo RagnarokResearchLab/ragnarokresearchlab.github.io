@@ -1,5 +1,4 @@
 ---
-sidebar_position: 2
 slug: /file-formats/gat
 title: GAT Format Specification
 ---
