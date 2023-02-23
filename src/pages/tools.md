@@ -34,13 +34,13 @@ Compared to building your own encoder/decoder toolkit, you'll get the following 
 
 * The tools are always kept in sync with the latest research, as published on this website
 * All the "boring" project management is also handled in the context of this project (issues, docs, ...)
-* Of course, the library is continually tested to ensure it supports all known format versions
+* Of course, the library is continuously tested to ensure it supports all known format versions
 
 If you build your own tools, e.g., for a language that isn't yet supported, and contribute them here:
 
-* You can make use of the existing test cases and fixtures for automated testing
+* You can make use of the existing test cases and fixtures to easily implement automated testing
 * Other developers will see your work and might be able to help you find mistakes or missing edge cases
-* Collaboration is fun (and usually more productive)!
+* Collaboration is fun (and usually more productive than doing everything on your own)!
 
 You can also just use the code as inspiration (but please consider contributing back if you find an issue).
 
