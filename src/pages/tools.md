@@ -26,7 +26,7 @@ Currently, only a few languages are supported:
 * C++ (also includes a C API)
 * LuaJIT (FFI only)
 
-If you'd like to add support for another language, you're more than welcome to contribute!
+If you'd like to add support for another language, contributions are more than welcome!
 
 ### Your Advantages
 
