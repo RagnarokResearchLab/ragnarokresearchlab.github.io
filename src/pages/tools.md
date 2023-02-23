@@ -16,15 +16,15 @@ Working with the file formats used by the RO client has traditionally been incon
 
 Things would be much easier if there was a (set of) "standard" libraries for handling the most common tasks.
 
-Since such a tool fits perfectly with this project (and I had already written the code anyway), `rofflib` was born.
+Since such a tool fits perfectly within this project (and I had already written the code anyway), `rofflib` was born.
 
 ### Supported Languages
 
 Currently, only a few languages are supported:
 
-* JavaScript
-* C++ (with C API)
-* LuaJIT (FFI)
+* JavaScript (using TypedArrays, which work in both NodeJS and the browser)
+* C++ (also includes a C API)
+* LuaJIT (FFI only)
 
 If you'd like to add support for another language, you're more than welcome to contribute!
 
