@@ -1,6 +1,6 @@
 ---
-slug: /file-formats/gr2
-title: GR2 (Placeholder)
+slug: /file-formats/grf
+title: GRF (Placeholder)
 ---
 
 :::info

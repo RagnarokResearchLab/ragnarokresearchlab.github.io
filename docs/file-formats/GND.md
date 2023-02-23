@@ -1,5 +1,4 @@
 ---
-sidebar_position: 30
 slug: /file-formats/gnd
 title: GND Format Specification
 ---
