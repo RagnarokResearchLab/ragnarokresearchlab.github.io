@@ -33,3 +33,53 @@ This section is a placeholder. If you know anything about the topic, please help
 This section is a placeholder. If you know anything about the topic, please help fill it with content!
 
 :::
+
+## File Formats
+
+The following file types have been found in the Japanese DVD release of Arcturus:
+
+```txt title=arcturus-jp-extensions.txt
+act
+atk
+bmp
+coonmt01
+dat
+db
+flc
+fnt
+gat
+gnd
+htm
+ico
+ini
+itm
+jp
+kr
+lnk
+mag
+mariaspr
+mon
+pix
+rma
+rsa
+rsm
+rsp
+rsw
+rsx
+scr
+skl
+spr
+tga
+tmp
+txt
+wav
+zip
+```
+
+This list can be generated with regular Unix shell commands (or [MSYS2](https://www.msys2.org/) on Windows):
+
+```sh title=find-unique-file-types.sh
+find . -type f -exec basename {} \; | sed 's/.*\.//' | sort | uniq > extensions.txt
+```
+
+Note: `mariaspr` is obviously intended to mean `maria.spr` (leftover SPR 1.1 sprite). `coonmt01` is a duplicate 8-bit `BMP` file (meh).
