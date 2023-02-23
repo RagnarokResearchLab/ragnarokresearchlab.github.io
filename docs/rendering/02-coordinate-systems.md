@@ -10,13 +10,13 @@ This document describes the coordinate systems used by the Ragnarok Online clien
 
 There are multiple different coordinate systems to account for when it comes to rendering the world:
 
-|        Name         |           Used by           |                       Origin                        | Dimension |
-| :-----------------: | :-------------------------: | :-------------------------------------------------: | :-------: |
-|  World Coordinates  |    Renderer (Direct3D?)     |        Zero vector (the actual world origin)        |    3D     |
-| Map Coordinates[^1] | `/where` command, GAT files | The map's southwest corner (_not_ the world origin) |    2D     |
-|   GND Coordinates   |          GND files          |   Southwest corner of the map (isomorphic to GAT)   |    2D     |
-|   RSM Coordinates   |     RSM and RSM2 files      | Origin of the model editor's coordinate system[^2]  |    3D     |
-|   GR2 Coordinates   |          GR2 files          | Origin of the model editor's coordinate system[^2]  |    3D     |
+|        Name         | Dimension |           Used by           |                       Origin                        |
+| :-----------------: | :-------: | :-------------------------: | :-------------------------------------------------: |
+|  World Coordinates  |    3D     |    Renderer (Direct3D?)     |        Zero vector (the actual world origin)        |
+| Map Coordinates[^1] |    2D     | `/where` command, GAT files | The map's southwest corner (_not_ the world origin) |
+|   GND Coordinates   |    2D     |          GND files          |   Southwest corner of the map (isomorphic to GAT)   |
+|   RSM Coordinates   |    3D     |     RSM and RSM2 files      | Origin of the model editor's coordinate system[^2]  |
+|   GR2 Coordinates   |    3D     |          GR2 files          | Origin of the model editor's coordinate system[^2]  |
 
 [^1] Alternatively, you could call them "GAT Coordinates" because that's effectively what they are.
 
