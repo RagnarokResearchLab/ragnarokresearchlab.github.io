@@ -36,6 +36,38 @@ This section contains unsubstantiated claims and/or speculation. It may or may n
 
 There are _presumably_ no special countermeasures taken when world updates take too long. This is purely based on personal experience, as performance degrades heavily in high-stress situations like War of Emperium. The server appears to simply update the simulation as fast as is physically possible, even if that isn't sufficient to guarantee a fluid gameplay experience.
 
+## Timer Granularity
+
+On Windows, timers rely on a coarse-grained systemwide clock signal that seems to tick once every 15 or so milliseconds:
+
+> The system clock "ticks" at a constant rate. If dwMilliseconds is less than the resolution of the system clock, the thread may sleep for less than the specified length of time. If dwMilliseconds is greater than one tick but less than two, the wait can be anywhere between one and two ticks, and so on.
+
+_Source: [Windows API documentation](https://learn.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-sleep#remarks) (should apply equally to all relevant, time-based WIN32 APIs)_
+
+This means that world state updates could easily be delayed when the clock signal was "missed", in difficult-to-predict patterns:
+
+```sh
+Last world update took 0.00 ms          Next update in 20.00 ms
+Last world update took 44.36 ms         Next update in 0.00 ms
+Last world update took 16.02 ms         Next update in 3.98 ms
+Last world update took 31.00 ms         Next update in 0.00 ms
+Last world update took 16.01 ms         Next update in 3.99 ms
+```
+
+The above simulates an "empty" server tick with an update frequency of 50 updates per second, so delays are purely accidental.
+
+Now, what you would _actually_ expect to happen is illustrated by running the same experiment on Linux (1ms system clock):
+
+```sh
+Last world update took 0.00 ms          Next update in 20.00 ms
+Last world update took 20.77 ms         Next update in 0.00 ms
+Last world update took 1.19 ms          Next update in 18.81 ms
+Last world update took 19.19 ms         Next update in 0.81 ms
+Last world update took 1.19 ms          Next update in 18.81 ms
+```
+
+How much these delays affect gameplay in practice is hard to tell, but it's interesting nonetheless.
+
 ## Simulation Steps
 
 Whenever the simulation is updated, a number of different processing steps must be executed. The exact requirements depend on the server configuration and version of the game. Here's a minimal example that includes all core gameplay systems:
