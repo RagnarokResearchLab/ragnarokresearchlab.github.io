@@ -45,6 +45,12 @@ Each entry in the `Tiles` array represents a surface block ("tile") of the given
 
 #### Terrain Types
 
+:::info
+
+More research is needed. If you know anything about the topic, please help fill in the blanks!
+
+:::
+
 The following terrain types are known to have practical applications:
 
 | Value | Walkable |             Interpretation             |
@@ -56,6 +62,12 @@ The following terrain types are known to have practical applications:
 There are [several other terrain types](https://openkore.com/wiki/Field_file_format), but it's unclear whether they affect clientside collision checks at all.
 
 ### Version 1.3
+
+:::info
+
+More research is needed. If you know anything about the topic, please help fill in the blanks!
+
+:::
 
 This version adds a twist to the `TerrainType` values: A special flag marks water tiles, though the layout itself hasn't changed. Effectively, two flags are seemingly embedded in the existing terrain type field. Consider the following example:
 
