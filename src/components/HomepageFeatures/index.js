@@ -34,8 +34,8 @@ const FeatureList = [
     actionableLinkTarget: "./tools/",
     description: (
       <>
-        Various utilities for working with RO-related data, made available under
-        a free software license.
+        Various utility programs aimed at developers, made available under a
+        free software license.
       </>
     ),
   },
