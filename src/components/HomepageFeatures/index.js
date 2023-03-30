@@ -34,8 +34,8 @@ const FeatureList = [
     actionableLinkTarget: "./tools/",
     description: (
       <>
-        Various utilities for working with RO-related data, made available under
-        a free software license.
+        Various utility programs aimed at developers, made available under a
+        free software license.
       </>
     ),
   },
@@ -51,10 +51,7 @@ function Feature({
   return (
     <div className={clsx("col col--4")}>
       <div className="feature-card">
-        <div className="text--center feature-card-image">
-          <img src={bannerImage} className="hero-banner-image" />
-        </div>
-        <div className="text--center padding-horiz--md">
+        <div className="text--center">
           <h3>{title}</h3>
           <p>{description}</p>
           <div className="banner-action-container">

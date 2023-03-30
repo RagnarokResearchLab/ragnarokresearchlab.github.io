@@ -12,24 +12,13 @@
   background-color: var(--background-color-dark);
   height: 100%;
   border-top: 1px solid var(--border-color-darkgrey);
-  border-radius: 5%;
-}
 
-.hero-banner-image {
-  border: 2px solid var(--border-color-darkgrey);
-  margin-top: 1.5em;
-  margin-bottom: 1em;
-  border-radius: 50%;
-  max-width: 280px;
-}
-
-.feature-card-image:hover {
-  filter: brightness(1.2);
+  /* For consistent spacing of all lines in the container */
+  padding: var(--ifm-paragraph-margin-bottom);
 }
 
 .banner-action-container {
   width: 100%;
-  margin-bottom: 1em;
 }
 
 .hero__title {
