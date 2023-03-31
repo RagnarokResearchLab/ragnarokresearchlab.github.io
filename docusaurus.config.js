@@ -104,10 +104,6 @@ const config = {
                 label: "Game Mechanics",
                 to: "/game-mechanics",
               },
-              {
-                label: "Glossary",
-                to: "/glossary",
-              },
             ],
           },
           {
