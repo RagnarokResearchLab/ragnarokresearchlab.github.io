@@ -127,8 +127,8 @@ const config = {
             title: "Tools",
             items: [
               {
-                label: "Coming Soon™",
-                href: "/tools/",
+                label: "EUC-KR Path Conversion",
+                href: "/tools/#euc-kr-path-conversion",
               },
             ],
           },
