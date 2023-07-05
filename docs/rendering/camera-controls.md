@@ -76,3 +76,24 @@ If this map was to be loaded, the camera's range of movement would be limited su
 - The vertical (polar) angle can be adjusted from _positive_ 40 to 65 degrees (remember that [the game world is upside down](/rendering/coordinate-systems#world-coordinates))
 
 Upon loading the map, the client places the camera so that it orbits the player at `(45, 65)` in spherical coordinates.
+
+## Orbital Rotations
+
+The origin of the spherical coordinates appears to be "looking into the screen" (alongside the positive Z axis). That is to say, rotating the camera by `(0, 0)` in spherical coordinates would place it at `(0, 0, -1)` in world coordinates. Camera rotations work similarly to directional lighting - as far as I can tell - although sunrays originate from `(0, 1, 0)` (in a non-inverted system) [^1].
+
+As for rotating alongside the axes, a few observations can be made:
+
+- Increasing the latitude (polar angle) rotates the camera clockwise around the X axis **in RO's world coordinates** (!)
+- Due to the inverted Y axis, these angles are always negative - positive values would move the camera "under the ground"
+- In a normalized coordinate system, north-south rotations must be inverted to move _counterclockwise_ ("up" and not "down")
+- Adding to the longitude (azimuth angle) rotates the camera clockwise around the Y axis, which works fine if normalized
+
+For a specific example, you can take a look at how the viewpoint controls the camera in Nameless Island (`abbey01`):
+
+- The azimuth angle can be adjusted from 0 to 70 degrees; it's easy to confirm that the camera will only move to the "left"
+- Polar angles range from -50 to -70 (meaning, 50 to 70 if normalized), and indeed the vertical range of motion is quite small
+
+While it's not possible to "see" that the world is upside down, negative polar angles in the table imply that it probably is [^2].
+
+[^1]: Derived by applying the same rotations with directional light angles stored in the [RSW](/file-formats/rsw) file and visually checking the result
+[^2]: Considering that terrain altitudes and water levels are also inverted in the game files, this seems like a safe bet.
