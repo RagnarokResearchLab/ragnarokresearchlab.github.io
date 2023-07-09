@@ -88,6 +88,8 @@ As for rotating alongside the axes, a few observations can be made:
 - In a normalized coordinate system, north-south rotations must be inverted to move _counterclockwise_ ("up" and not "down")
 - Adding to the longitude (azimuth angle) rotates the camera clockwise around the Y axis, which works fine if normalized
 
+"Clockwise" here means "clockwise if looking at the origin" (from the camera's point of view), parallel to the respective axis.
+
 For a specific example, you can take a look at how the viewpoint controls the camera in Nameless Island (`abbey01`):
 
 - The azimuth angle can be adjusted from 0 to 70 degrees; it's easy to confirm that the camera will only move to the "left"
