@@ -87,13 +87,19 @@ As for rotating alongside the axes, a few observations can be made:
 - Due to the inverted Y axis, these angles are always negative - positive values would move the camera "under the ground"
 - In a normalized coordinate system, north-south rotations must be inverted to move _counterclockwise_ ("up" and not "down")
 - Adding to the longitude (azimuth angle) rotates the camera clockwise around the Y axis, which works fine if normalized
+- Horizontal rotations appear to roughly add/remove one degree per pixel (possibly normalized for screen size?)
+- Vertical rotations appear to add/remove exactly five degrees per scroll event to the vertical rotation angle
 
 "Clockwise" here means "clockwise if looking at the origin" (from the camera's point of view), parallel to the respective axis.
 
 For a specific example, you can take a look at how the viewpoint controls the camera in Nameless Island (`abbey01`):
 
 - The azimuth angle can be adjusted from 0 to 70 degrees; it's easy to confirm that the camera will only move to the "left"
-- Polar angles range from -50 to -70 (meaning, 50 to 70 if normalized), and indeed the vertical range of motion is quite small
+- Polar angles range from -50 to -70 (meaning, 50 to 70 if normalized), although the rotation is actually more restricted (?)
+- There's probably some special rules for fixed-viewpoint maps since the range is more limited than expected (4 vs. 5 steps)
+- Checking other maps we can see that the rule of "five degrees per step" holds, at least while the angle is below 65 degree
+
+More research is needed as to why and how exactly the range is clamped in special cases (fixed viewpoint, high vertical angles).
 
 While it's not possible to "see" that the world is upside down, negative polar angles in the table imply that it probably is [^2].
 
