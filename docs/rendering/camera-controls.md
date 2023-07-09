@@ -105,3 +105,32 @@ While it's not possible to "see" that the world is upside down, negative polar a
 
 [^1]: Derived by applying the same rotations with directional light angles stored in the [RSW](/file-formats/rsw) file and visually checking the result
 [^2]: Considering that terrain altitudes and water levels are also inverted in the game files, this seems like a safe bet.
+
+## Zoom Levels
+
+The exact range of allowed zoom levels depends on the client version. There are two versions that I've seen:
+
+- In a 2004 client, the maximum zoom level was (roughly) 7 steps - and a final 8th one that barely moves the camera
+- In a 20212 Renewal client, the maximum zoom level was (roughly) 24 steps - and again a more limited 25th one
+- In both cases, the step size appears to be uneven as the last step was noticeably "smaller"
+
+After testing different settings, I arrived at the following approximate results:
+
+- The step size is ~5 normalized world units per zoom level (possibly a little below that due to the "extra" bump?)
+- A minimal distance of 40 to 50 normalized world units (200 to 250) looks right - I opted for 45, which seemed close enough
+- As a max distance, something like (normalized) 80 for a classic feel and maybe 150 or so for Renewal might work (unsure)
+
+The exact values depend on the mimum level plus step size, but here's the levels at a step size of five normalized world units:
+
+| Zoom Level | Distance | Normalized |
+| :--------: | :------: | :--------: |
+|     0      |   225    |     45     |
+|     1      |   250    |     50     |
+|     2      |   275    |     55     |
+|     3      |   300    |     60     |
+|     4      |   325    |     65     |
+|     5      |   350    |     70     |
+|     6      |   375    |     75     |
+|     7      |   400    |     80     |
+
+This can be extrapolated up to the maximum distance of about 800 - 825, but the step size should still be the same.
