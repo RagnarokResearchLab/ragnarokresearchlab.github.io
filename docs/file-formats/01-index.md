@@ -57,6 +57,7 @@ Here's a list of the atomic data types that you may encounter in the layout tabl
 |  `char`   |    1     |                             An ASCII-encoded fixed-size character of unit length                              |
 | `string`  | variable |             Fixed-size, null-terminated, or counted string (as noted in the field's description)              |
 | `struct`  | variable |        Binary structure of arbitrary size, with a unique layout (will generally be listed separately)         |
+|  `blob`   | variable |               Opaque binary structure of arbitrary size (processed using third-party libraries)               |
 |  `array`  | variable |           Fixed-size array of structures or values; the exact size depends and may only be implicit           |
 
 Please note that in many cases the exact type is unknown and can only be guessed, based on examples found "in the wild".
