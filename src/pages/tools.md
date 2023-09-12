@@ -6,6 +6,24 @@ slug: /tools
 
 This page contains miscellaneous utilities that may be of interest, but don't warrant a dedicated repository.
 
+## EBM Export (with zlib)
+
+Decompressing guild emblems is trivial in any language environment that has bindings to the [zlib](https://www.zlib.net/) API:
+
+```js title=decompress-ebm-with-zlib.js
+const fs = require("fs");
+const zlib = require("zlib");
+
+const EBM_FILE_PATH = "some-guild-emblem.ebm";
+
+const buffer = fs.readFileSync(EBM_FILE_PATH);
+const bitmap = zlib.inflateSync(buffer);
+
+fs.writeFileSync(EBM_FILE_PATH + ".bmp", bitmap);
+```
+
+_Example: Decompressing EBM files using [Node.js' builtin zlib module](https://nodejs.org/api/zlib.html)_
+
 ## EUC-KR Path Conversion
 
 File names have traditionally been stored as [EUC-KR](https://en.wikipedia.org/wiki/Extended_Unix_Code) encoded Windows paths inside the [GRF](/file-formats/grf) archive.
