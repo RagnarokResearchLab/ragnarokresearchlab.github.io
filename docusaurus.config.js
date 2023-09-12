@@ -121,6 +121,10 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/RagnarokResearchLab",
               },
+              {
+                label: "Related Projects",
+                to: "/community-projects",
+              },
             ],
           },
           {
