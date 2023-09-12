@@ -37,3 +37,15 @@ Example:
 - `data\model\¿ÜºÎ¼ÒÇ°\Æ®·¦01.rsm` will be converted to `data/model/외부소품/트랩01.rsm`
 
 You can then paste into [Google Translate](https://translate.google.com/?sl=auto&tl=en&text=data%2Fmodel%2F%EC%99%B8%EB%B6%80%EC%86%8C%ED%92%88%2F%ED%8A%B8%EB%9E%A901.rsm&op=translate) to receive an English file name, or use their API to translate in bulk.
+
+## RagLite Developer Toolkit
+
+The latest iteration of my toolkit is now freely available on GitHub: [RagnarokResearchLab/RagLite](https://github.com/RagnarokResearchLab/RagLite)
+
+While I won't be releasing all of my old tooling, which I expect to become fully obsolete over time, this version is kept continuously in sync with the documentation published on these pages. Here's what it generally aims to do:
+
+- Make it easy to analyze RO-specific binary file formats in their many different versions, convert them, etc.
+- Visualize 2D sprites and 3D geometry in a "realistic" (close-enough approximation) ingame environment
+- Validate hypotheses and verify claims by reimplementing the features in question, where it makes sense
+
+Please note that this is explicitly **NOT** a full game client or server implementation. If you want that, there are [many other projects](/community-projects) aiming to accomplish this lofty goal. My focus is on research, and the tool reflects that.
