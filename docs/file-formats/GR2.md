@@ -3,6 +3,8 @@ slug: /file-formats/gr2
 title: GR2 Format Specification
 ---
 
+This document describes the GR2 file format used in the Ragnarok Online client.
+
 ## Contents
 
 GR2 files are binary data stores created by the proprietary [Granny3D](http://www.radgametools.com/granny.html) SDK. They contain the following:
