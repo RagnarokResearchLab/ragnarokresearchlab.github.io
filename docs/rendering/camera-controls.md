@@ -14,7 +14,7 @@ The game uses a flexible but fairly standard camera system, known under many dif
 - Players can adjust the camera on two angles, horizontally and vertically
 - In RO, only half of the horizontal range can be explored (for technical and probably stylistic reasons)
 
-[Here's](https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_introduction#arc-rotate-camera) and example explaining how it works; this is not engine-specific but rather a general method of rendering a 3D scene.
+[Here's](https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_introduction#arc-rotate-camera) an example explaining how it works; this is not engine-specific but rather a general method of rendering a 3D scene.
 
 ## Perspective Projection
 
