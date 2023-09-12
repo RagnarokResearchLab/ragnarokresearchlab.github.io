@@ -131,6 +131,10 @@ const config = {
             title: "Tools",
             items: [
               {
+                label: "EBM Export (with zlib)",
+                href: "/tools/#ebm-export-with-zlib",
+              },
+              {
                 label: "EUC-KR Path Conversion",
                 href: "/tools/#euc-kr-path-conversion",
               },
