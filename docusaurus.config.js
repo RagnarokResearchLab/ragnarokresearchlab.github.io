@@ -130,6 +130,10 @@ const config = {
                 label: "EUC-KR Path Conversion",
                 href: "/tools/#euc-kr-path-conversion",
               },
+              {
+                label: "RagLite Developer Toolkit",
+                href: "/tools/#raglite-developer-toolkit",
+              },
             ],
           },
         ],
