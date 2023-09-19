@@ -31,3 +31,13 @@ This is just a quick correction to the original article, which mentions the use 
 
 According to [this blog comment by Fabian Giesen](https://fgiesen.wordpress.com/2022/04/04/entropy-decoding-in-oodle-data-huffman-decoding-on-the-jaguar/#comment-23605) (of RAD), Oodle-0 is actually
 using a standard [Lempel-Ziv-77](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) compressor combined with a (presumably adaptive) [arithmetic encoder](https://en.wikipedia.org/wiki/Arithmetic_coding). Indeed it appears that the compressed GR2 sections are fed into the AE decoder and then the LZ decompressor, though the specifics of how the AE works aren't exactly clear to me.
+
+## See also
+
+Here's a few resources that might help with understanding the Oodle decompression:
+
+- [Explanation of the LZ77 compression algorithm](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-wusp/fb98aa28-5cd7-407f-8869-a6cef1ff1ccb)
+- [The Hitchhiker's Guide to Compression](https://go-compression.github.io/)
+- [Data Compression With Arithmetic Coding](https://marknelson.us/posts/2014/10/19/data-compression-with-arithmetic-coding.html)
+- [Arithmetic coding (Wikipedia)](https://en.wikipedia.org/wiki/Arithmetic_coding)
+- [Arithmetic coding - Video series on YouTube (by mathematicalmonk)](https://www.youtube.com/@mathematicalmonk/videos)
