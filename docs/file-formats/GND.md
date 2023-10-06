@@ -16,6 +16,12 @@ GND files contain the following information:
 
 The file contents effectively represent the basic terrain for a given map, without 3D models, sprites, or other decoration.
 
+## Versions
+
+The following GND versions can be found in the kRO client's `data.grf` archive:
+
+![gnd-versions.png](gnd-versions.png)
+
 ## Layout
 
 ### Arcturus & iRO Alpha
