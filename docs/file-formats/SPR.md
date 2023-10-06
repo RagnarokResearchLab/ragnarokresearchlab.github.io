@@ -47,6 +47,12 @@ Alpha values in the BMP palette are completely ignored. RGBA colors will be stor
 
 The color with palette index 0 should be considered the "background color". It must be cleared manually, though.
 
+## Versions
+
+The following SPR versions can be found in the kRO client's `data.grf` archive:
+
+![spr-versions.png](spr-versions.png)
+
 ## Layout
 
 ### Version 1.1
