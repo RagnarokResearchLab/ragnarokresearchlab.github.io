@@ -15,7 +15,9 @@ SPR files contain the following information:
 
 The file contents can be interpreted as a [spritesheet](https://en.wikipedia.org/wiki/Texture_atlas) and combined with [ACT files](/file-formats/act) to implement animated sprites.
 
-## Bitmap Color Palette
+## Features
+
+### Bitmap Color Palette
 
 Instead of encoding the RGBA pixels directly, the BMP segment of the file uses a [color palette](<https://en.wikipedia.org/wiki/Palette_(computing)>) with up to 256 colors:
 
@@ -25,7 +27,7 @@ Instead of encoding the RGBA pixels directly, the BMP segment of the file uses a
 
 The palette included in the SPR file is the default palette. It's possible to load in [PAL](/file-formats/pal) files to recolor a given sprite.
 
-## Run-Length Encoding
+### Run-Length Encoding
 
 Because most sprites include a significant number of (transparent) background pixels, later versions of the format employ a primitive compression scheme to reduce the number of identical palette indices that have to be stored in the BMP segment.
 
@@ -39,7 +41,7 @@ If that sounds confusing, here's some examples:
 
 This feature isn't used for the truecolor (TGA) segments as pixels are stored in ABGR format, in which repetition is less common.
 
-## Transparency
+### Transparency
 
 Alpha values in the BMP palette are completely ignored. RGBA colors will be stored raw and not premultiplied.
 
