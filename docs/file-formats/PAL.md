@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/pal
-title: PAL (Placeholder)
+title: PAL Format Specification
 ---
 
 This document describes the PAL file format used in the Ragnarok Online client.
