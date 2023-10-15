@@ -82,10 +82,10 @@ This is the GRF version used in the latest kRO client, as well as regional clien
 
 |        Field         | Offset | Length |   Type   |                              Description                              |
 | :------------------: | :----: | :----: | :------: | :-------------------------------------------------------------------: |
-|     `Signature`      |   0    |   15   | `string` | Always `"Master of Magic"` (fixed-sice, _without_ a null-terminator)  |
+|     `Signature`      |   0    |   15   | `string` | Always `"Master of Magic"` (fixed-size, _without_ a null-terminator)  |
 |   `EncryptionKey`    |   15   |   15   | `string` | Array of `byte` values; all zeroes if encryption isn't used (default) |
 |  `FileTableOffset`   |   30   |   4    |  `uint`  |  Where the file table is stored (relative to the start of the file)   |
-|   `ScramblingSeed`   |   34   |   4    |  `uint`  |      Seemingly used for obfusciating the contents of the archive      |
+|   `ScramblingSeed`   |   34   |   4    |  `uint`  |      Seemingly used for obfuscating the contents of the archive       |
 | `ScrambledFileCount` |   38   |   4    |  `uint`  |   Subtract `ScramblingSeed` and `7` to compute the real `FileCount`   |
 |      `Version`       |   42   |   4    |  `uint`  |      Encodes the version in major.minor format (two bytes each)       |
 
