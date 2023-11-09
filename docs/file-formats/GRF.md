@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/grf
-title: GRF Format Specification
+title: GRF
 ---
 
 This document describes the GRF file format used in the Ragnarok Online client.
