@@ -30,7 +30,20 @@ As of 2023, there appears to be no third-party implementation that doesn't rely 
 This is just a quick correction to the original article, which mentions the use of Huffman tables.
 
 According to [this blog comment by Fabian Giesen](https://fgiesen.wordpress.com/2022/04/04/entropy-decoding-in-oodle-data-huffman-decoding-on-the-jaguar/#comment-23605) (of RAD), Oodle-0 is actually
-using a standard [Lempel-Ziv-77](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) compressor combined with a (presumably adaptive) [arithmetic encoder](https://en.wikipedia.org/wiki/Arithmetic_coding). Indeed it appears that the compressed GR2 sections are fed into the AE decoder and then the LZ decompressor, though the specifics of how the AE works aren't exactly clear to me.
+using a standard [Lempel-Ziv-77](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) compressor combined with a (presumably adaptive) [arithmetic encoder](https://en.wikipedia.org/wiki/Arithmetic_coding). Indeed it appears that the compressed GR2 segments are fed into the AE decoder and then the LZ decompressor, though the specifics of how the arithmetic coding works aren't exactly clear.
+
+## Data Segments
+
+All GR2 files are split into multiple segments, which can be individually compressed. Cursory data analysis yields:
+
+- The first segments is always large (and often the largest), presumably containing the bulk of the data tree
+- Segments two, three, four, and five likely contain the geometry as they're absent from RO skeletons
+- Segments two and three are always used together; the same goes for four and five (hinting at related data)
+- Segment two is always larger than three, and segment four is always larger than five - which hints at vertices/indices
+- A reasonable guess is that those are just vertex positions, indices, normals, etc., split according to statistical properties
+- The last segment is large and always uncompressed, probably containing the (already-compressed) textures
+
+It's been reported that other games may use more segments (unverified claim), but in RO there are always six.
 
 ## See also
 
