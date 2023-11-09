@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/gat
-title: GAT Format Specification
+title: GAT
 ---
 
 This document describes the GAT file format used in the Ragnarok Online client.

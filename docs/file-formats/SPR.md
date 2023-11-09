@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/spr
-title: SPR Format Specification
+title: SPR
 ---
 
 This document describes the SPR file format used in the Ragnarok Online client (and Arcturus).

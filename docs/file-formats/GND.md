@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/gnd
-title: GND Format Specification
+title: GND
 ---
 
 This document describes the GND file format used in the Ragnarok Online client.

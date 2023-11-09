@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/rsw
-title: RSW Format Specification
+title: RSW
 ---
 
 This document describes the RSW file format used in the Ragnarok Online client.

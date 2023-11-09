@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/ebm
-title: EBM Format Specification
+title: EBM
 ---
 
 This document describes the EBM file format used in the Ragnarok Online client.

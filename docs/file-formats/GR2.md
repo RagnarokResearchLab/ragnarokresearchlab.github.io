@@ -1,6 +1,6 @@
 ---
 slug: /file-formats/gr2
-title: GR2 Format Specification
+title: GR2
 ---
 
 This document describes the GR2 file format used in the Ragnarok Online client.
