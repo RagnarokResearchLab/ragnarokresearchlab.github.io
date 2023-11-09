@@ -45,6 +45,10 @@ All GR2 files are split into multiple segments, which can be individually compre
 
 It's been reported that other games may use more segments (unverified claim), but in RO there are always six.
 
+### Data Tracks
+
+Oodle-0 compressed segments consist of multiple data tracks, which are defined by the start and end offset, as well as certain compressor settings. The range (`from` and `to`) is defined in the segment header, while compression parameters and inputs for the arithmetic decoder can be found at the start of each compressed segment. More research is needed on these parameters.
+
 ## See also
 
 Here's a few resources that might help with understanding the Oodle decompression:
