@@ -182,7 +182,7 @@ Source: [Shinryo, as posted on the rAthena forums](https://rathena.org/board/top
 
 This concept is known as [vertex colors](https://gamedev.stackexchange.com/questions/139059/what-is-a-vertex-color) and it works by submitting additional information for a given vertex, which is then used by the graphics hardware to color it differently. It was widely used in older games where dynamic lighting wasn't feasible due to technical limitations, and it can have a significant visual impact for barely any effort at all.
 
-This vertex color should be applied to the bottom left corner (vertex) of each tile and the vertices of all adjacent tiles that happen to be in the same position. With this, one can define colored spots for all corners of the tile grid with little overhead.
+This vertex color should be applied to the bottom left corner (vertex) of each tile and the vertices of all adjacent tiles that happen to be in the same position. With this, one can define colored spots for all corners of the tile grid with little overhead. As far as I could determine, vertex colors supplied by `WALL` surfaces are ignored; they appear to use the same color as the `GROUND` surface at the same `(u, v)` coordinates.
 
 ## References
 
