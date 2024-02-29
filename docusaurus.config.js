@@ -154,6 +154,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+        additionalLanguages: ["c", "cpp", "lua", "rust", "wgsl"],
       },
     }),
 };
