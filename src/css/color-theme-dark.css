@@ -64,3 +64,32 @@ code {
   font-size: 85%;
   border: none;
 }
+
+/* Prism.js: Better syntax highlighting for important language keywords */
+span.token.keyword {
+  color: blue !important;
+  font-weight: bold;
+}
+
+span.token.class-name {
+  color: rgb(255, 0, 0) !important;
+}
+
+/* Prism.js: Magic comments for diff highlights */
+.code-block-diff-add-line {
+  background-color: #ccffd8;
+  background-color: rgb(230, 255, 235);
+  background-color: rgb(220, 255, 225);
+  display: block;
+  margin: 0 calc(var(--ifm-pre-padding) * -1);
+  padding: 0 var(--ifm-pre-padding);
+}
+
+.code-block-diff-remove-line {
+  background-color: #ffebe9;
+  background-color: rgb(255, 235, 235);
+  background-color: rgb(255, 225, 225);
+  display: block;
+  margin: 0 calc(var(--ifm-pre-padding) * -1);
+  padding: 0 var(--ifm-pre-padding);
+}
