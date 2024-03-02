@@ -43,75 +43,182 @@ This feature isn't used for the truecolor (TGA) segments as pixels are stored in
 
 ### Transparency
 
-Alpha values in the BMP palette are completely ignored. RGBA colors will be stored raw and not premultiplied.
+Alpha values in the BMP palette should be completely ignored. RGBA colors are stored raw and not premultiplied.
 
-The color with palette index 0 should be considered the "background color". It must be cleared manually, though.
+The color with palette index 0 can be considered the "background color". It must be cleared manually on load.
 
 ## Layout
 
-### Version 1.1
+### Versions
 
-This most basic variant only supports BMP sprites. It's used in [Arcturus](/arcturus), but not in any known version of the RO client.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-|       Field        |  Offset  |  Length  |   Type   |                               Description                               |
-| :----------------: | :------: | :------: | :------: | :---------------------------------------------------------------------: |
-|      `Header`      |    0     |    2     | `string` |              `"SP"` as an ASCII-encoded, fixed-size string              |
-|   `MinorVersion`   |    2     |    1     |  `byte`  |                         Versioning information                          |
-|   `MajorVersion`   |    3     |    1     |  `byte`  |                         Versioning information                          |
-| `BitmapImageCount` |    4     |    2     | `ushort` |              How many images are stored in the BMP segment              |
-|  `BitmapSprites`   |    6     | variable | `array`  |    Indexed-color sprite images; pixels are stored as palette indices    |
-|   `ColorPalette`   | variable |   1024   | `array`  | RGBA pixel colors (`byte` values); always stored at the end of the file |
+<Tabs>
+<TabItem value="1.1" label="Version 1.1" default>
 
-#### Bitmap Sprites
+```cpp title="SPR File Format (v1.1)"
+struct BitmapSprite {
+    uint16_t ImageWidth;
+    uint16_t ImageHeight;
+    uint8_t PaletteIndices[ImageWidth * ImageHeight];
+};
 
-This repeating structure contains the raw pixel data in the form of references to palette entries that need to be resolved.
+struct PaletteColor {
+    uint8_t Red;
+    uint8_t Green;
+    uint8_t Blue;
+    uint8_t Alpha;
+};
 
-|      Field       | Offset |  Length  |  Type   |                      Description                       |
-| :--------------: | :----: | :------: | :-----: | :----------------------------------------------------: |
-|   `ImageWidth`   |   0    |    2     | `short` |     The width of the sprite image, given in pixels     |
-|  `ImageHeight`   |   2    |    2     | `short` |    The height of the sprite image, given in pixels     |
-| `PaletteIndices` |   4    | variable | `array` | Array of indexed-color palette indices (`byte` values) |
+struct RagnarokSPR {
+    char Signature[2];
+    uint8_t VersionMajor;
+    uint8_t VersionMinor;
+    uint16_t BitmapImageCount;
+    struct BitmapSprite BitmapSprites[BitmapImageCount];
+    struct PaletteColor BitmapColors[256];
+};
+```
 
-A size of `-1, -1` (`FF FF FF FF`) indicates an invalid image, which consists of a single pixel that can (probably) be discarded.
+</TabItem>
+<TabItem value="2.0" label="Version 2.0">
 
-### Version 2.0
+```cpp title="SPR File Format (v2.0)"
+struct BitmapSprite {
+    uint16_t ImageWidth;
+    uint16_t ImageHeight;
+    uint8_t PaletteIndices[ImageWidth * ImageHeight];
+};
 
-This version adds the ability to store truecolor images (RGBA pixels with an alpha channel). It appears in RO and Arcturus.
+// diff-add-start
+struct TrueColorPixel {
+    uint8_t Alpha;
+    uint8_t Blue;
+    uint8_t Green;
+    uint8_t Red;
+};
 
-|         Field         |  Offset  |  Length  |   Type   |                               Description                               |
-| :-------------------: | :------: | :------: | :------: | :---------------------------------------------------------------------: |
-|       `Header`        |    0     |    2     | `string` |              `"SP"` as an ASCII-encoded, fixed-size string              |
-|    `MinorVersion`     |    2     |    1     |  `byte`  |                         Versioning information                          |
-|    `MajorVersion`     |    3     |    1     |  `byte`  |                         Versioning information                          |
-|  `BitmapImageCount`   |    4     |    2     | `ushort` |              How many images are stored in the BMP segment              |
-| `TruecolorImageCount` |    6     |    2     | `ushort` |              How many images are stored in the TGA segment              |
-|    `BitmapSprites`    |    8     | variable | `array`  |    Indexed-color sprite images; pixels are stored as palette indices    |
-|  `TruecolorSprites`   | variable | variable | `array`  |     Truecolor sprite images; pixels are stored raw (in order ABGR)      |
-|    `ColorPalette`     | variable |   1024   | `array`  | RGBA pixel colors (`byte` values); always stored at the end of the file |
+struct TrueColorSprite {
+    uint16_t ImageWidth;
+    uint16_t ImageHeight;
+    struct TrueColorPixel PixelBuffer[ImageWidth * ImageHeight];
+};
+// diff-add-end
 
-#### Truecolor Sprites
+struct PaletteColor {
+    uint8_t Red;
+    uint8_t Green;
+    uint8_t Blue;
+    uint8_t Alpha;
+};
 
-This repeating structure contains the raw pixel data in an uncompressed form.
+struct RagnarokSPR {
+    char Signature[2];
+    uint8_t VersionMajor;
+    uint8_t VersionMinor;
+    uint16_t BitmapImageCount;
+    // diff-add
+    uint16_t TrueColorImageCount;
+    struct BitmapSprite BitmapSprites[BitmapImageCount];
+    // diff-add
+    struct TrueColorSprite TrueColorSprites[TrueColorImageCount];
+    struct PaletteColor BitmapColors[256];
+};
+```
 
-|     Field     | Offset |  Length  |  Type   |                   Description                   |
-| :-----------: | :----: | :------: | :-----: | :---------------------------------------------: |
-| `ImageWidth`  |   0    |    2     | `short` | The width of the sprite image, given in pixels  |
-| `ImageHeight` |   2    |    4     | `short` | The height of the sprite image, given in pixels |
-| `PixelBuffer` |   6    | variable | `array` |  Array of raw ABGR image data (`byte` values)   |
+</TabItem>
+<TabItem value="2.1" label="Version 2.1">
 
-### Version 2.1
+```cpp title="SPR File Format (v2.1)"
+// diff-remove
+struct BitmapSprite {
+// diff-add
+struct CompressedBitmapSprite {
+    uint16_t ImageWidth;
+    uint16_t ImageHeight;
+    // diff-remove
+    uint8_t PaletteIndices[ImageWidth * ImageHeight];
+    // diff-add-start
+    uint16_t CompressedBufferSize;
+    uint8_t CompressedPaletteIndices[CompressedBufferSize];
+    // diff-add-end
+};
 
-This version adds compression (via [RLE](#run-length-encoding)) for images in the BMP segment of the file. It's used in all modern RO clients.
+struct TrueColorPixel {
+    uint8_t Alpha;
+    uint8_t Blue;
+    uint8_t Green;
+    uint8_t Red;
+};
 
-#### Compressed Bitmap Sprites
+struct TrueColorSprite {
+    uint16_t ImageWidth;
+    uint16_t ImageHeight;
+    struct TrueColorPixel PixelBuffer[ImageWidth * ImageHeight];
+};
 
-The only difference here is that runs of zero palette indices (i.e., multiple background pixels) are RLE-compressed.
+struct PaletteColor {
+    uint8_t Red;
+    uint8_t Green;
+    uint8_t Blue;
+    uint8_t Alpha;
+};
 
-|           Field            | Offset |  Length  |   Type   |                         Description                          |
-| :------------------------: | :----: | :------: | :------: | :----------------------------------------------------------: |
-|        `ImageWidth`        |   0    |    2     | `short`  |        The width of the sprite image, given in pixels        |
-|       `ImageHeight`        |   2    |    2     | `short`  |       The height of the sprite image, given in pixels        |
-|   `CompressedBufferSize`   |   4    |    2     | `ushort` |       How many bytes to feed into the RLE decompressor       |
-| `CompressedPaletteIndices` |   6    | variable | `array`  | RLE-compressed indexed-color palette indices (`byte` values) |
+struct RagnarokSPR {
+    char Signature[2];
+    uint8_t VersionMajor;
+    uint8_t VersionMinor;
+    uint16_t BitmapImageCount;
+    uint16_t TrueColorImageCount;
+    // diff-remove
+    struct BitmapSprite BitmapSprites[BitmapImageCount];
+    // diff-add
+    struct CompressedBitmapSprite CompressedBitmapSprites[BitmapImageCount];
+    struct TrueColorSprite TrueColorSprites[TrueColorImageCount];
+    struct PaletteColor BitmapColors[256];
+};
+```
 
-The size of the decompressed image is still `ImageWidth * ImageHeight`, but you must read `CompressedBufferSize` bytes only.
+</TabItem>
+</Tabs>
+
+### Fields
+
+#### Signature
+
+Uniquely identifies the file format. Must always be `"SP"` (ASCII-encoded, fixed-size string).
+
+#### Version
+
+Signals the presence of optional features. Version `1.1` is used only in [Arcturus](/arcturus), but not in any known build of the RO client.
+
+#### BitmapSprites
+
+Indexed-color sprite images (BMP segment). All pixels are stored as palette indices that need to be resolved on load.
+
+A size of `(-1, -1)` indicates an invalid image, which consists of a single blank pixel that can safely be discarded.
+
+#### BitmapColors
+
+The BMP color palette, consisting of RGBA pixels. Alpha can be discarded. Equivalent to the file contents of a [PAL](/file-formats/pal) file.
+
+#### TrueColorSprites
+
+True color sprite images (TGA segment). Pixels are stored raw in order ABGR and they do make use of the alpha channel.
+
+#### CompressedBitmapSprites
+
+Indexed-color sprite images (BMP segment). All pixels are stored as palette indices that need to be resolved on load.
+
+Background pixels are [RLE](#run-length-encoding)-compressed, so all pixels referring to palette index zero must be decompressed first.
+
+## References
+
+Multiple open-source SPR decoders exist:
+
+- [GPL-licensed implementation in JavaScript (RoBrowser)](https://github.com/MrAntares/roBrowserLegacy/blob/master/src/Loaders/Sprite.js)
+- [MIT-licensed implementation in Rust (Korangar)](https://github.com/vE5li/korangar/blob/main/src/loaders/sprite/mod.rs)
+- [MPL-licensed implementation in LuaJIT (RagLite SDK)](https://github.com/RagnarokResearchLab/RagLite/blob/main/Core/FileFormats/RagnarokSPR.lua)
+
+This list only includes actively-maintained versions; [various other community projects](/community-projects) may also be of interest.
