@@ -147,7 +147,7 @@ This quantization step is the cause of [color banding](https://en.wikipedia.org/
 
 Lightmap textures affect only the terrain ([ground mesh](/rendering/ground-mesh)) directly. Scene decorations may be lit separately (see [Object Lighting](#object-lighting)).
 
-Said alpha channel encodes the [ambient occlusion](https://en.wikipedia.org/wiki/Ambient_occlusion) percentage, while the RGB channel encodes the light contribution of the [dynamic light sources](#dynamic-lights) that were used to bake the lightmap texture. Colors lose even more precision due to the alpha channel:
+The alpha channel encodes an [ambient occlusion](https://en.wikipedia.org/wiki/Ambient_occlusion) percentage, while the RGB channel encodes the light contribution of the [dynamic light sources](#dynamic-lights) that were used to bake the lightmap texture. Colors lose even more precision due to the alpha channel:
 
 ![posterized-lightmaps-closeup.png](posterized-lightmaps-closeup.png)
 
@@ -157,7 +157,7 @@ Each lightmap texture slices include a buffer area (1 pixel wide) that's designe
 
 ## Vertex Fogging Stage
 
-Adds a basic color grading effect to any scene that uses the effect - if there's no fog this is effectively a NOOP.
+Applies a basic color grading effect to any scene that's configured to use fog. If there's no fog, this is effectively a NOOP.
 
 ### Fog Parameters
 
