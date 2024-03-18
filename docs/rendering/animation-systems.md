@@ -23,10 +23,12 @@ FrameDisplayTimeInMilliseconds = AnimationClip.FrameTimeInIntervals * 25;
 Before diving into the accuracy of this estimate (_spoiler alert - it's slightly off_), some questions immediately spring to mind:
 
 - Why is the frame time given in "intervals" (as ACT editor calls them) in the first place?
-- Where does the 25 ms time value that has so far been used by the community actually come from?
+- Where does the 25 ms time value that has so far been used by the community actually come from? [^1]
 - Is it at all correct, and is there a way to precisely measure sprite animation times to verify/disprove this?
 
 The following sections attempt to answer these questions, as far as is realistically possible.
+
+[^1]: The earliest known source appears to be [an earlier specification of the ACT format](https://web.archive.org/web/20200220130616/http://mist.in/gratia/ro/spr/ActFileFormatFix.html), which indicates a tool called actOR
 
 ### Animation State Updates
 
