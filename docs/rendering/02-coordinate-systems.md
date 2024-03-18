@@ -18,9 +18,8 @@ There are multiple different coordinate systems to account for when it comes to 
 |   RSM Coordinates   |    3D     |     RSM and RSM2 files      | Origin of the model editor's coordinate system[^2]  |
 |   GR2 Coordinates   |    3D     |          GR2 files          | Origin of the model editor's coordinate system[^2]  |
 
-[^1] Alternatively, you could call them "GAT Coordinates" because that's effectively what they are.
-
-[^2] Whatever software the artists used works with a different local origin, which needs to be transformed to world space.
+[^1]: Alternatively, you could call them "GAT Coordinates" because that's effectively what they are.
+[^2]: Whatever software the artists used works with a different local origin, which needs to be transformed to world space.
 
 ## World Coordinates
 
