@@ -29,7 +29,7 @@ The vast majority of maps in the RO client use this version, including those fou
 |    `Height`    |   10   |   4    |  `int`   |         The vertical size of the map, given in tiles          |
 |    `Tiles`     |  14+   |   20   | `array`  | Contains the navigation properties for `Width * Height` tiles |
 
-[^1] Technically, old versions have a zero-byte prefix shifting the layout. It's still GAT 1.2 otherwise.
+[^1]: Technically, old versions have a zero-byte prefix shifting the layout. It's still GAT 1.2 otherwise.
 
 #### Tile Properties
 

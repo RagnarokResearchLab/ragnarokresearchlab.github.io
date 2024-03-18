@@ -96,7 +96,7 @@ The lightmap and ambient occlusion textures are split into small bitmaps:
 | `ShadowmapPixels` |   16   |   64   | `array` |  `Width * Height` ambient occlusion texture pixels (intensity values)   |
 | `LightmapPixels`  |   16   |  192   | `array` |      `Width * Height` lightmap texture pixels (specularity values)      |
 
-[^1] _This value appears to be ignored; the actual pixel format should always be 8-bit RGBA (stored as ARGB)._
+[^1]: _This value appears to be ignored; the actual pixel format should always be 8-bit RGBA (stored as ARGB)._
 
 #### Textured Surfaces
 

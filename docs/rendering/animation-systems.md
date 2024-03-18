@@ -34,9 +34,9 @@ In order to answer the first question, a bit of guesswork is needed. There's of 
 
 If one assumes the existence of one or several timers that update the animation state machines, operating at a fixed clock speed, it wouldn't be as far-fetched to describe frame display times in terms of full cycles on this clock. In fact, there is some evidence that other systems (e.g., particles) do indeed involve such self-clocking mechanisms to compute their own time deltas.
 
-This might seem like a peculiar design choice compared to a global delta time (the "standard" approach). However, it's clear that there are several different animation systems working to animate objects such as the Granny3D models, water surfaces, particle systems, and RSM(2) models[^*]. In light of this, adding one more for sprites to the mix doesn't seem particularly strange.
+This might seem like a peculiar design choice compared to a global delta time (the "standard" approach). However, it's clear that there are several different animation systems working to animate objects such as the Granny3D models, water surfaces, particle systems, and RSM(2) models[^2]. In light of this, adding one more for sprites to the mix doesn't seem particularly strange.
 
-[^*] This is obvious since they all use different units of measurement; Also, GR2 models were added much later in development.
+[^2]: This is obvious since they all use different units of measurement; Also, GR2 models were added much later in development.
 
 ### Predicting Animation Times
 

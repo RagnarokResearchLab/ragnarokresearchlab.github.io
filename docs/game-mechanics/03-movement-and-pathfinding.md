@@ -34,7 +34,7 @@ _Source: Kokotewa (no direct link available)_
 |    Osiris    |         100         | Very fast                                 |
 | Treasure Box |          0          | Cannot move at all                        |
 
-[^1] Immobile creatures can still technically move (at their configured speed), but this is almost certainly a bug.
+[^1]: Immobile creatures can still technically move (at their configured speed), but this is almost certainly a bug.
 
 ### Statistics
 
@@ -58,4 +58,4 @@ This section is a placeholder. If you know anything about the topic, please help
 
 When damaged, actors usually [^2] cannot move for a brief period of time, effectively "stunning" them when they suffer a "hit". Afterwards, movement commences on the precomputed path unless their position has been altered via knockback effects.
 
-[^2] Certain auras, like Endure, can make them immune to this mechanic.
+[^2]: Certain auras, like Endure, can make them immune to this mechanic.
