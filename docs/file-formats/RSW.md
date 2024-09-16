@@ -87,7 +87,7 @@ There are multiple types of decorative scene objects, which are differentiated b
 The following object types may be used:
 
 ```cpp
-enum {
+enum ObjectTypeID {
 	SCENE_OBJECT_TYPE_ANIMATED_PROP = 1,
 	SCENE_OBJECT_TYPE_DYNAMIC_LIGHT_SOURCE = 2,
 	SCENE_OBJECT_TYPE_SPATIAL_AUDIO_SOURCE = 3,
