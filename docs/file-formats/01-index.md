@@ -61,3 +61,17 @@ Here's a list of the atomic data types that you may encounter in the layout tabl
 |  `array`  | variable |           Fixed-size array of structures or values; the exact size depends and may only be implicit           |
 
 Please note that in many cases the exact type is unknown and can only be guessed, based on examples found "in the wild".
+
+## List of Relevant File Formats
+
+The following special formats are used by the Ragnarok Online client:
+
+* Map files: RSW, GND, GAT
+* 3D models: RSM, RSM2, GR2 (see RAD website)
+* 2D sprites and effects: SPR, ACT, PAL, IMF, EBM, STR, EZV (BMP, TGA, JPG)
+* Archives: GRF, RGZ, GPF
+* Scripts: Lua and LUB (see Lua website)
+
+TODO old README, maybe separate page
+
+See also the list of Arcturus file formats; many formats are shared between RO and Arcturus (but not all).
