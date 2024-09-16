@@ -117,6 +117,17 @@ Instances of a given [RSM](/file-formats/rsm) model can be placed in the scene a
 |     `ScaleY`      |  240   |   4    | `float`  |           Y scale factor applied to the model instance           |
 |     `ScaleZ`      |  244   |   4    | `float`  |           Z scale factor applied to the model instance           |
 
+The known values for `AnimationTypeID` are:
+
+```cpp
+enum AnimationTypeID {
+	ANIMATION_TYPE_NONE = 0,
+	ANIMATION_TYPE_LOOPING = 2,
+}
+```
+
+Only those types have been observed in the game files, though other modes might be supported.
+
 ##### Dynamic Light Sources
 
 Dynamic lights aren't actually rendered by the client, as their output is baked into the [lightmaps](/file-formats/gnd##lightmap-slices) stored in the map's GND file:
