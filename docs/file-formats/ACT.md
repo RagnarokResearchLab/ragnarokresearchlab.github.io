@@ -58,9 +58,10 @@ struct SpriteLayer {
 };
 
 struct AnimationFrame {
-    int32_t UnusedMysteryBytes[8];
+    uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
 };
 
 struct AnimationClip {
@@ -97,9 +98,10 @@ struct SpriteLayer {
 };
 
 struct AnimationFrame {
-    int32_t UnusedMysteryBytes[8];
+    uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
 };
 
 struct AnimationClip {
@@ -147,7 +149,7 @@ struct SpriteLayer {
 
 // diff-add-start
 struct SpriteAnchor{
-    int32_t UnusedMysteryBytes;
+    uint8_t UnusedMysteryBytes[4];
     int32_t PositionU;
     int32_t PositionV;
     int32_t UnknownFlag;
@@ -155,9 +157,10 @@ struct SpriteAnchor{
 // diff-add-end
 
 struct AnimationFrame {
-    int32_t UnusedMysteryBytes[8];
+    uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     // diff-add-start
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
@@ -211,16 +214,17 @@ struct SpriteLayer {
 };
 
 struct SpriteAnchor{
-    int32_t UnusedMysteryBytes;
+    uint8_t UnusedMysteryBytes[4];
     int32_t PositionU;
     int32_t PositionV;
     int32_t UnknownFlag;
 };
 
 struct AnimationFrame {
-    int32_t UnusedMysteryBytes[8];
+    uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
 };
@@ -272,16 +276,17 @@ struct SpriteLayer {
 };
 
 struct SpriteAnchor{
-    int32_t UnusedMysteryBytes;
+    uint8_t UnusedMysteryBytes[4];
     int32_t PositionU;
     int32_t PositionV;
     int32_t UnknownFlag;
 };
 
 struct AnimationFrame {
-    int32_t UnusedMysteryBytes[8];
+    uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
 };
