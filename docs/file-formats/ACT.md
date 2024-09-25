@@ -61,6 +61,7 @@ struct AnimationFrame {
     uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
 };
 
 struct AnimationClip {
@@ -100,6 +101,7 @@ struct AnimationFrame {
     uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
 };
 
 struct AnimationClip {
@@ -158,6 +160,7 @@ struct AnimationFrame {
     uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     // diff-add-start
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
@@ -221,6 +224,7 @@ struct AnimationFrame {
     uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
 };
@@ -282,6 +286,7 @@ struct AnimationFrame {
     uint8_t UnusedMysteryBytes[32];
     uint32_t SpriteLayerCount;
     struct SpriteLayer SpriteLayers[SpriteLayerCount];
+    int32_t AnimationEventID;
     int32_t SpriteAnchorCount;
     struct SpriteAnchor AnchorPoints[SpriteAnchorCount];
 };
