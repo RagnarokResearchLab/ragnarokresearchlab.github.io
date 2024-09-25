@@ -264,7 +264,6 @@ struct SpriteLayer {
     uint8_t ColorTintGreen;
     uint8_t ColorTintBlue;
     uint8_t ColorTintAlpha;
-    float Scale;
     float ScaleU;
     float ScaleV;
     int32_t RotationDegrees;
