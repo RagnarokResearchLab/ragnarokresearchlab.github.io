@@ -32,15 +32,10 @@ onwards there is a new member that defines how many frames there are in a second
 
 | Version       | Model-level position | Mesh-level position | Mesh-level rotation | Mesh-level scale | Mesh-level texture uv |
 | ------------- | :------------------: | :-----------------: | :-----------------: | :--------------: | :-------------------: |
-| Version 1.1\* |                      |                     |                     |                  |
-| Version 1.2\* |                      |                     |                     |                  |
-| Version 1.3\* |                      |                     |                     |                  |
 | Version 1.4   |          ✅          |                     |         ✅          |                  |
 | Version 1.5   |          ✅          |                     |         ✅          |                  |
 | Version 2.2   |                      |         ✅          |         ✅          |        ✅        |
 | Version 2.3   |                      |         ✅          |         ✅          |        ✅        |          ✅           |
-
-**\* No data**
 
 ### Shading
 
@@ -76,27 +71,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="1.1" label="Version 1.1" default>
 
-:::info
-No Data for this version
-:::
-
-</TabItem>
-<TabItem value="1.2" label="Version 1.2" default>
-
-:::info
-No Data for this version
-:::
-
-</TabItem>
-<TabItem value="1.3" label="Version 1.3" default>
-
-:::info
-No Data for this version
-:::
-
-</TabItem>
 <TabItem value="1.4" label="Version 1.4" default>
 
 ```cpp title="RSM File Format (v1.4)"
