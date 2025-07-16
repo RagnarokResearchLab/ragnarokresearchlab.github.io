@@ -30,12 +30,12 @@ is defined on the model and can differ from the length defined on the animation 
 The animation duration prior to version 2.2 was defined as 1000 frames per second, from 2.2
 onwards there is a new member that defines how many frames there are in a second.
 
-| Version       | Model-level position | Mesh-level position | Mesh-level rotation | Mesh-level scale | Mesh-level texture uv |
-| ------------- | :------------------: | :-----------------: | :-----------------: | :--------------: | :-------------------: |
-| Version 1.4   |          ✅          |                     |         ✅          |                  |
-| Version 1.5   |          ✅          |                     |         ✅          |                  |
-| Version 2.2   |                      |         ✅          |         ✅          |        ✅        |
-| Version 2.3   |                      |         ✅          |         ✅          |        ✅        |          ✅           |
+| Version     | Model-level position | Mesh-level position | Mesh-level rotation | Mesh-level scale | Mesh-level texture uv |
+| ----------- | :------------------: | :-----------------: | :-----------------: | :--------------: | :-------------------: |
+| Version 1.4 |          ✅          |                     |         ✅          |                  |
+| Version 1.5 |          ✅          |                     |         ✅          |                  |
+| Version 2.2 |                      |         ✅          |         ✅          |        ✅        |
+| Version 2.3 |                      |         ✅          |         ✅          |        ✅        |          ✅           |
 
 ### Shading
 
