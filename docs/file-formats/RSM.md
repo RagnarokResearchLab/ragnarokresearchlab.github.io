@@ -10,12 +10,13 @@ This document describes the RSM file format used in the Ragnarok Online client (
 RSM files represent models that are scattered across the world, like buildings and trees.
 
 They contain:
-* Animation length or animation frames per second
-* Shade type
-* Alpha
-* Textures
-* Meshes
-* Animations
+
+- Animation length or animation frames per second
+- Shade type
+- Alpha
+- Textures
+- Meshes
+- Animations
 
 From version 2.0 the extension of the files changed from `rsm` to `rsm2`.
 
@@ -29,24 +30,25 @@ is defined on the model and can differ from the length defined on the animation 
 The animation duration prior to version 2.2 was defined as 1000 frames per second, from 2.2
 onwards there is a new member that defines how many frames there are in a second.
 
-Version | Model-level position | Mesh-level position | Mesh-level rotation | Mesh-level scale | Mesh-level texture uv
---- | :---: | :---: | :---: | :---: | :---: 
-Version 1.1* | | | | | 
-Version 1.2* | | | | | 
-Version 1.3* | | | |  | 
-Version 1.4 | ✅ | | ✅ | | 
-Version 1.5 | ✅ | | ✅ | | 
-Version 2.2 | | ✅ | ✅ | ✅ | 
-Version 2.3 | | ✅ | ✅ | ✅ | ✅
+| Version       | Model-level position | Mesh-level position | Mesh-level rotation | Mesh-level scale | Mesh-level texture uv |
+| ------------- | :------------------: | :-----------------: | :-----------------: | :--------------: | :-------------------: |
+| Version 1.1\* |                      |                     |                     |                  |
+| Version 1.2\* |                      |                     |                     |                  |
+| Version 1.3\* |                      |                     |                     |                  |
+| Version 1.4   |          ✅          |                     |         ✅          |                  |
+| Version 1.5   |          ✅          |                     |         ✅          |                  |
+| Version 2.2   |                      |         ✅          |         ✅          |        ✅        |
+| Version 2.3   |                      |         ✅          |         ✅          |        ✅        |          ✅           |
 
 **\* No data**
 
 ### Shading
 
 A model can use one of 3 shading types:
-* Unlit
-* Flat
-* Smooth
+
+- Unlit
+- Flat
+- Smooth
 
 #### Unlit
 
@@ -63,11 +65,10 @@ each vertex can be influenced by multiple faces.
 
 ### Transparency
 
-Initially models had an alpha member, but it is said to be unused, but models can still have 
+Initially models had an alpha member, but it is said to be unused, but models can still have
 transparency by the use of TGA textures.
 
 ## Layout
-
 
 ### Versions
 
@@ -108,7 +109,7 @@ struct RagnarokRSM {
     uint8_t alpha;
     uint8_t padding[16];
     uint32_t texture_count;
-    // List of length `texture_count` of strings of length 40 
+    // List of length `texture_count` of strings of length 40
     char** textures;
     char root_mesh[40];
     uint32_t mesh_count;
@@ -191,7 +192,7 @@ struct RagnarokRSM {
     uint8_t alpha;
     uint8_t padding[16];
     uint32_t texture_count;
-    // List of length `texture_count` of strings of length 40 
+    // List of length `texture_count` of strings of length 40
     char** textures;
     char root_mesh[40];
     uint32_t mesh_count;
