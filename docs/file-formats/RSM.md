@@ -381,9 +381,9 @@ struct ScaleKeyFrame {
 ```
 
 </TabItem>
-<TabItem value="2.2" label="Version 2.2" default>
+<TabItem value="2.3" label="Version 2.3" default>
 
-```cpp title="RSM File Format (v2.2)"
+```cpp title="RSM File Format (v2.3)"
 struct RagnarokRSM {
     char signature[4];
     uint8_t version_major;
