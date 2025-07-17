@@ -71,10 +71,10 @@ This documentation differentiates between them only as far as is necessary to un
 
 Bundling many small files in a [BLOB](https://en.wikipedia.org/wiki/Object_storage) "archive" can help minimize the disk footprint and speed up loading times:
 
-* [GRF](/file-formats/GRF): Most of the game assets are stored in this large storage container, potentially compressed and/or encrypted
-* [RGZ](/file-formats/RGZ): The RO client includes a "Patch Client" that downloads most updates in this compressed storage format
-* [GPF](/file-formats/GPF): Another extension used the the game's updater, which however seems to just be an alias for GRF files
-* [PAK](/file-formats/PAK): Arcturus and early RO clients use a different format, the origins of which aren't quite clear to me at this time
+- [GRF](/file-formats/GRF): Most of the game assets are stored in this large storage container, potentially compressed and/or encrypted
+- [RGZ](/file-formats/RGZ): The RO client includes a "Patch Client" that downloads most updates in this compressed storage format
+- [GPF](/file-formats/GPF): Another extension used the the game's updater, which however seems to just be an alias for GRF files
+- [PAK](/file-formats/PAK): Arcturus and early RO clients use a different format, the origins of which aren't quite clear to me at this time
 
 Although modern SSDs have different performance characteristics than mechanical HDDs, the game continues to rely on asset containers as a virtual file system. Most frequently-accessed files must therefore be extracted in-memory or on disk.
 
@@ -82,33 +82,33 @@ Although modern SSDs have different performance characteristics than mechanical 
 
 A combination of standard and custom-made image formats see use in the RO client:
 
-* [BMP](https://en.wikipedia.org/wiki/BMP_file_format): Most of the sprites and textures mapped to 3D geometry exists as raw bitmap
-* PAL: They're lookup tables that store [palette](https://en.wikipedia.org/wiki/Palette_(computing)) colors for the indexed-color image formats
-* [TGA](https://en.wikipedia.org/wiki/Truevision_TGA): Truecolor images with transparency exist for many effects and some monster sprites
-* [JPG](https://en.wikipedia.org/wiki/JPEG): These appear to be fairly rare, but in a few instances JPEG textures were assigned
-* [EBM](/file-formats/ebm): Guild emblems are also bitmaps, but the RO client compresses them first
+- [BMP](https://en.wikipedia.org/wiki/BMP_file_format): Most of the sprites and textures mapped to 3D geometry exists as raw bitmap
+- PAL: They're lookup tables that store [palette](<https://en.wikipedia.org/wiki/Palette_(computing)>) colors for the indexed-color image formats
+- [TGA](https://en.wikipedia.org/wiki/Truevision_TGA): Truecolor images with transparency exist for many effects and some monster sprites
+- [JPG](https://en.wikipedia.org/wiki/JPEG): These appear to be fairly rare, but in a few instances JPEG textures were assigned
+- [EBM](/file-formats/ebm): Guild emblems are also bitmaps, but the RO client compresses them first
 
 Other formats may include image data as well, but it's usually combined with other metadata.
 
 ### Map Definitions
 
-* Map files: RSW, GND, GAT
+- Map files: RSW, GND, GAT
 
 ### 2D Sprites
 
-* 2D sprites and effects: SPR, ACT, , IMF, , STR, EZV (, , )
+- 2D sprites and effects: SPR, ACT, , IMF, , STR, EZV (, , )
 
 ### 3D Models
 
 TODO: RSM, RSM2, GR2, Arcturus (RMA?)
-* 3D models: RSM, RSM2, GR2 (see RAD website)
 
+- 3D models: RSM, RSM2, GR2 (see RAD website)
 
 ### Miscellaneous
 
 Anything that doesn't fit the above criteria - most of these aren't particularly relevant:
 
-* Scripts: Lua and LUB (see Lua website)
+- Scripts: Lua and LUB (see Lua website)
 
 ```sh
       1 bak
@@ -153,7 +153,7 @@ Anything that doesn't fit the above criteria - most of these aren't particularly
   39505 spr
   46583 bmp
   54845 act
-  ```
+```
 
 See https://github.com/RagnarokResearchLab/ragnarokresearchlab.github.io/issues/92#issuecomment-1858732921
 
@@ -165,10 +165,10 @@ Also check Arcturus? (Maybe later...)
 
 Although both games contain various multimedia formats, they will not be fully specified here:
 
-* [WAV](https://en.wikipedia.org/wiki/WAV): Sound effects and music-like jingles/songs utilize the waveform audio format
-* [MP3](https://en.wikipedia.org/wiki/MP3): All of the background music ("BGM") tracks use this standard audio format
-* [BIK](/file-formats): Video textures in [Bink](https://www.radgametools.com/bnkmain.htm) format; introduced recently and so far extremely niche
-* [ADP](/file-formats/adp): Arcturus stores its music tracks in [ADPCM](https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation) format, with a fairly arcane codec
+- [WAV](https://en.wikipedia.org/wiki/WAV): Sound effects and music-like jingles/songs utilize the waveform audio format
+- [MP3](https://en.wikipedia.org/wiki/MP3): All of the background music ("BGM") tracks use this standard audio format
+- [BIK](/file-formats): Video textures in [Bink](https://www.radgametools.com/bnkmain.htm) format; introduced recently and so far extremely niche
+- [ADP](/file-formats/adp): Arcturus stores its music tracks in [ADPCM](https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation) format, with a fairly arcane codec
 
 ---
 
