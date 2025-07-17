@@ -104,6 +104,16 @@ TODO: RSM, RSM2, GR2, Arcturus (RMA?)
 
 - 3D models: RSM, RSM2, GR2 (see RAD website)
 
+### Multimedia
+
+Although both games contain various multimedia formats, they will not be fully specified here:
+
+- [WAV](https://en.wikipedia.org/wiki/WAV): Sound effects and music-like jingles/songs utilize the waveform audio format
+- [MP3](https://en.wikipedia.org/wiki/MP3): All of the background music ("BGM") tracks use this standard audio format
+- [BIK](/file-formats): Video textures in [Bink](https://www.radgametools.com/bnkmain.htm) format; introduced recently and so far extremely niche
+- [ADP](/file-formats/adp): Arcturus stores its music tracks in [ADPCM](https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation) format, with a fairly arcane codec
+
+
 ### Miscellaneous
 
 Anything that doesn't fit the above criteria - most of these aren't particularly relevant:
@@ -160,15 +170,6 @@ See https://github.com/RagnarokResearchLab/ragnarokresearchlab.github.io/issues/
 Most of this is probably garbage - double-check just to be safe?
 
 Also check Arcturus? (Maybe later...)
-
-### Multimedia
-
-Although both games contain various multimedia formats, they will not be fully specified here:
-
-- [WAV](https://en.wikipedia.org/wiki/WAV): Sound effects and music-like jingles/songs utilize the waveform audio format
-- [MP3](https://en.wikipedia.org/wiki/MP3): All of the background music ("BGM") tracks use this standard audio format
-- [BIK](/file-formats): Video textures in [Bink](https://www.radgametools.com/bnkmain.htm) format; introduced recently and so far extremely niche
-- [ADP](/file-formats/adp): Arcturus stores its music tracks in [ADPCM](https://en.wikipedia.org/wiki/Adaptive_differential_pulse-code_modulation) format, with a fairly arcane codec
 
 ---
 
