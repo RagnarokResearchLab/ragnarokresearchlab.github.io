@@ -36,7 +36,9 @@ This section is a placeholder. If you know anything about the topic, please help
 
 ## File Formats
 
-The following file types have been found in the Japanese DVD release of Arcturus:
+The following file types have been found in the Japanese DVD release of Arcturus (TODO: Add hash of the PAK files? There aren't that many versions...):
+
+TODO: Shared file formats -> link to RO overview or combine both and add to landing page/link from there?
 
 ```txt title=arcturus-jp-extensions.txt
 act
