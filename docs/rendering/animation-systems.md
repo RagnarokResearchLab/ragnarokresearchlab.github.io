@@ -83,4 +83,4 @@ In fact, the range of possible clock interval times narrows in on exactly 24 ms 
 
 At the above interval count of 128, the difference between both models is significant; this can no longer be explained by mere variance - or even measurement errors. What's more, the predicted frame time matches the observed time almost exactly if _and only if_ the real period is actually 24 ms (and not 25). Therefore, the animation system must be working with 24 ms intervals.
 
-_NOTE: If you want to reproduce these results, you can find all of the relevant files [here](https://valkyrie-realm.net/research/act-frame-times/), alongside some rudimentary usage instructions._
+_NOTE: If you want to reproduce these results, you can find all of the relevant files [here](https://valkyrie-realm.net/research/file-formats/act/frame-times/), alongside some rudimentary usage instructions._
