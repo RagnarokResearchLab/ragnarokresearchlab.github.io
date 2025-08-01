@@ -41,7 +41,17 @@ How many channels can be found in the ADPCM-encoded audio stream. Always `2` (fo
 
 #### AudioStreamSizeInBytes
 
-How many bytes can be extracted from the ADPCM-encoded audio stream. Represents the distance until `EOF`.
+How many samples can be extracted from the ADPCM-encoded audio stream per channel. Here's an example:
+
+- File: `002.adp`
+- `NumInterleavedAudioChannels`: 2
+- `AudioStreamSizeInBytes`: `5,232,022` bytes (hexadecimal: `96 D5 4F 00`)
+- Total file size: `2,616,027` bytes
+- ADPCM stream length: `2,616,027 - 16 = 2,616,011` (subtract `StartingOffset`)
+- Distance to end of file: `AudioStreamSizeInBytes / NumInterleavedAudioChannels = 5,232,022 / 2 = 2,616,011`
+- Space needed to store the result: `AudioStreamSizeInBytes` per channel (`sizeof(int16_t) = 2` bytes per sample)
+
+The entire stream will have been consumed once you extract `2,616,011` bytes. There should be no leftover bytes.
 
 #### Compressed Audio Stream
 
