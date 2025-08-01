@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.8.1">
 <title data-rh="true">ADP | Ragnarok Research Lab</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://ragnarokresearchlab.github.io/file-formats/adp/"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="ADP | Ragnarok Research Lab"><meta data-rh="true" name="description" content="This document describes the ADP file format used in Arcturus."><meta data-rh="true" property="og:description" content="This document describes the ADP file format used in Arcturus."><link data-rh="true" rel="icon" href="/img/favicon-with-transparency.png"><link data-rh="true" rel="canonical" href="https://ragnarokresearchlab.github.io/file-formats/adp/"><link data-rh="true" rel="alternate" href="https://ragnarokresearchlab.github.io/file-formats/adp/" hreflang="en"><link data-rh="true" rel="alternate" href="https://ragnarokresearchlab.github.io/file-formats/adp/" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ADP","item":"https://ragnarokresearchlab.github.io/file-formats/adp"}]}</script><link rel="stylesheet" href="/assets/css/styles.6f30c7a3.css">
-<script src="/assets/js/runtime~main.9fba7f82.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.753f310d.js" defer="defer"></script>
 <script src="/assets/js/main.9c4bacf8.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -26,7 +26,17 @@
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="numinterleavedaudiochannels">NumInterleavedAudioChannels<a href="#numinterleavedaudiochannels" class="hash-link" aria-label="Direct link to NumInterleavedAudioChannels" title="Direct link to NumInterleavedAudioChannels">​</a></h4>
 <p>How many channels can be found in the ADPCM-encoded audio stream. Always <code>2</code> (for stereo = alternating left/right).</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="audiostreamsizeinbytes">AudioStreamSizeInBytes<a href="#audiostreamsizeinbytes" class="hash-link" aria-label="Direct link to AudioStreamSizeInBytes" title="Direct link to AudioStreamSizeInBytes">​</a></h4>
-<p>How many bytes can be extracted from the ADPCM-encoded audio stream. Represents the distance until <code>EOF</code>.</p>
+<p>How many samples can be extracted from the ADPCM-encoded audio stream per channel. Here&#x27;s an example:</p>
+<ul>
+<li>File: <code>002.adp</code></li>
+<li><code>NumInterleavedAudioChannels</code>: 2</li>
+<li><code>AudioStreamSizeInBytes</code>: <code>5,232,022</code> bytes (hexadecimal: <code>96 D5 4F 00</code>)</li>
+<li>Total file size: <code>2,616,027</code> bytes</li>
+<li>ADPCM stream length: <code>2,616,027 - 16 = 2,616,011</code> (subtract <code>StartingOffset</code>)</li>
+<li>Distance to end of file: <code>AudioStreamSizeInBytes / NumInterleavedAudioChannels = 5,232,022 / 2 = 2,616,011</code></li>
+<li>Space needed to store the result: <code>AudioStreamSizeInBytes</code> per channel (<code>sizeof(int16_t) = 2</code> bytes per sample)</li>
+</ul>
+<p>The entire stream will have been consumed once you extract <code>2,616,011</code> bytes. There should be no leftover bytes.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="compressed-audio-stream">Compressed Audio Stream<a href="#compressed-audio-stream" class="hash-link" aria-label="Direct link to Compressed Audio Stream" title="Direct link to Compressed Audio Stream">​</a></h4>
 <p>ADPCM-encoded 4-bit audio samples. For stereo streams, each byte corresponds to a single (<code>LEFT</code>, <code>RIGHT</code>) audio sample.</p>
 <h2 class="anchor anchorWithStickyNavbar_LWe7" id="adpcm-compression">ADPCM Compression<a href="#adpcm-compression" class="hash-link" aria-label="Direct link to ADPCM Compression" title="Direct link to ADPCM Compression">​</a></h2>
